@@ -1,0 +1,712 @@
+﻿/* ========================================
+   VMGS HSTAI 777 CSS RESET
+   Modern CSS Reset - Cross-browser Consistency
+   Version: 1.0.0
+   Author: VMGS Design Team
+   ======================================== */
+
+/* =================================================================
+   1. BOX-SIZING BORDER-BOX - ĐẢM BẢO TÍNH TOÁN KÍCH THƯỚC CHUẨN
+   ================================================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* =================================================================
+   2. BASE - CÀI ĐẶT CƠ BẢN
+   ================================================================= */
+html {
+    /* Remove text size adjustments on mobile devices */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    
+    /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth;
+    
+    /* Prevent zooming on mobile devices (optional) */
+    /* touch-action: manipulation; */
+    
+    /* Base font size for REM calculations */
+    font-size: 16px;
+    
+    /* Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =================================================================
+   3. BODY - THÂN TRANG
+   ================================================================= */
+body {
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Set default font family */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    /* Set default font size */
+    font-size: 1rem;
+    
+    /* Set default line height */
+    line-height: 1.5;
+    
+    /* Set default text color */
+    color: #1a1a1a;
+    
+    /* Set default background color */
+    background-color: #ffffff;
+    
+    /* Prevent overflow-x on mobile */
+    overflow-x: hidden;
+    
+    /* Improve text rendering */
+    text-rendering: optimizeLegibility;
+}
+
+/* =================================================================
+   4. TYPOGRAPHY - KIỂU CHỮ
+   ================================================================= */
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Set default font weight */
+    font-weight: 600;
+    
+    /* Reset line height */
+    line-height: 1.2;
+}
+
+/* Paragraphs */
+p {
+    /* Remove default margin */
+    margin: 0;
+}
+
+/* Links */
+a {
+    /* Remove default text decoration */
+    text-decoration: none;
+    
+    /* Set default color */
+    color: inherit;
+    
+    /* Remove tap highlight on mobile */
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Improve tap target size on mobile */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* =================================================================
+   5. LISTS - DANH SÁCH
+   ================================================================= */
+ul,
+ol {
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 0;
+    
+    /* Remove default list style */
+    list-style: none;
+}
+
+dl {
+    /* Remove default margin */
+    margin: 0;
+}
+
+dt {
+    /* Set bold font weight */
+    font-weight: 600;
+}
+
+dd {
+    /* Remove default margin */
+    margin: 0;
+}
+
+/* =================================================================
+   6. TEXT ELEMENTS - PHẦN TỬ VĂN BẢN
+   ================================================================= */
+abbr[title] {
+    /* Add underline to abbreviations */
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+b,
+strong {
+    /* Set bold font weight */
+    font-weight: 700;
+}
+
+blockquote {
+    /* Remove default margin */
+    margin: 0;
+}
+
+cite {
+    /* Set italic font style */
+    font-style: italic;
+}
+
+code,
+kbd,
+samp,
+pre {
+    /* Set monospace font family */
+    font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+    
+    /* Set font size */
+    font-size: 1em;
+}
+
+pre {
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Preserve whitespace and line breaks */
+    white-space: pre-wrap;
+}
+
+small {
+    /* Set smaller font size */
+    font-size: 80%;
+}
+
+sub,
+sup {
+    /* Position subscript and superscript */
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* =================================================================
+   7. TABLES - BẢNG
+   ================================================================= */
+table {
+    /* Remove default spacing between cells */
+    border-collapse: collapse;
+    border-spacing: 0;
+    
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Set full width by default */
+    width: 100%;
+}
+
+caption {
+    /* Remove default padding */
+    padding: 0;
+    
+    /* Set caption text alignment */
+    text-align: left;
+}
+
+th,
+td {
+    /* Remove default padding */
+    padding: 0;
+    
+    /* Set text alignment */
+    text-align: left;
+}
+
+/* =================================================================
+   8. FORMS - BIỂU MẪU
+   ================================================================= */
+/* Buttons */
+button {
+    /* Remove default padding */
+    padding: 0;
+    
+    /* Remove default border */
+    border: none;
+    
+    /* Remove default background */
+    background: none;
+    
+    /* Remove default font inheritance */
+    font: inherit;
+    
+    /* Remove default cursor */
+    cursor: pointer;
+    
+    /* Remove tap highlight on mobile */
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Remove focus outline (will be added back for accessibility) */
+    outline: none;
+}
+
+/* Input fields */
+input,
+textarea,
+select,
+optgroup,
+fieldset {
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Remove default padding */
+    padding: 0;
+    
+    /* Remove default font inheritance */
+    font: inherit;
+    
+    /* Remove default color inheritance */
+    color: inherit;
+    
+    /* Remove default background */
+    background: none;
+    
+    /* Remove default border */
+    border: none;
+    
+    /* Remove tap highlight on mobile */
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Remove focus outline (will be added back for accessibility) */
+    outline: none;
+}
+
+/* Textarea */
+textarea {
+    /* Preserve whitespace and line breaks */
+    white-space: pre-wrap;
+}
+
+/* Select */
+select {
+    /* Remove default arrow on Firefox */
+    text-transform: none;
+}
+
+/* Fieldset */
+fieldset {
+    /* Remove default border */
+    border: none;
+    
+    /* Remove default padding */
+    padding: 0;
+    
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Remove default min-inline-size on Firefox */
+    min-inline-size: 0;
+}
+
+/* Legend */
+legend {
+    /* Remove default padding */
+    padding: 0;
+}
+
+/* Label */
+label {
+    /* Remove default cursor */
+    cursor: pointer;
+}
+
+/* =================================================================
+   9. IMAGES & MEDIA - HÌNH ẢNH VÀ PHƯƠNG TIỆN
+   ================================================================= */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    /* Set max width to prevent overflow */
+    max-width: 100%;
+    
+    /* Set vertical alignment */
+    vertical-align: middle;
+    
+    /* Remove default border */
+    border: 0;
+}
+
+/* SVG */
+svg {
+    /* Remove default fill */
+    fill: currentColor;
+    
+    /* Remove default overflow */
+    overflow: hidden;
+}
+
+/* Video */
+video {
+    /* Set display block to remove extra space */
+    display: block;
+}
+
+/* Canvas */
+canvas {
+    /* Set display block */
+    display: block;
+}
+
+/* =================================================================
+   10. EMBEDDED CONTENT - NỘI DUNG NHÚNG
+   ================================================================= */
+iframe {
+    /* Set border to none */
+    border: 0;
+}
+
+/* =================================================================
+   11. GROUPING CONTENT - NHÓM NỘI DUNG
+   ================================================================= */
+figure {
+    /* Remove default margin */
+    margin: 0;
+}
+
+figcaption {
+    /* Remove default margin */
+    margin: 0;
+}
+
+hr {
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Remove default border */
+    border: 0;
+    
+    /* Set default height */
+    height: 1px;
+    
+    /* Set default background color */
+    background-color: currentColor;
+    
+    /* Set default color */
+    color: inherit;
+}
+
+/* =================================================================
+   12. INTERACTIVE ELEMENTS - PHẦN TỬ TƯƠNG TÁC
+   ================================================================= */
+details {
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Remove default padding */
+    padding: 0;
+}
+
+summary {
+    /* Remove default list style */
+    list-style: none;
+    
+    /* Set cursor pointer */
+    cursor: pointer;
+}
+
+dialog {
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Remove default padding */
+    padding: 0;
+    
+    /* Remove default border */
+    border: none;
+}
+
+menu {
+    /* Remove default margin */
+    margin: 0;
+    
+    /* Remove default padding */
+    padding: 0;
+    
+    /* Remove default list style */
+    list-style: none;
+}
+
+/* =================================================================
+   13. RUBY ANNOTATION - CHÚ THÍCH RUBY
+   ================================================================= */
+ruby {
+    /* Remove default display */
+    display: inline;
+}
+
+rt {
+    /* Set smaller font size */
+    font-size: 0.8em;
+}
+
+rp {
+    /* Hide parentheses in supporting browsers */
+    display: none;
+}
+
+/* =================================================================
+   14. QUOTES - TRÍCH DẪN
+   ================================================================= */
+q {
+    /* Remove default quotes */
+    quotes: none;
+}
+
+q::before,
+q::after {
+    /* Remove content */
+    content: '';
+}
+
+/* =================================================================
+   15. SELECTION - LỰA CHỌN VĂN BẢN
+   ================================================================= */
+::selection {
+    /* Set selection background color */
+    background-color: rgba(255, 107, 0, 0.2);
+    
+    /* Set selection text color */
+    color: inherit;
+}
+
+::-moz-selection {
+    /* Firefox selection */
+    background-color: rgba(255, 107, 0, 0.2);
+    color: inherit;
+}
+
+/* =================================================================
+   16. PLACEHOLDERS - VĂN BẢN GỢI Ý
+   ================================================================= */
+::placeholder {
+    /* Set placeholder color */
+    color: #999999;
+    
+    /* Set placeholder opacity */
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Firefox placeholder */
+    color: #999999;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* IE/Edge placeholder */
+    color: #999999;
+    opacity: 1;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge placeholder */
+    color: #999999;
+    opacity: 1;
+}
+
+/* =================================================================
+   17. SCROLLBARS - THANH CUỘN
+   ================================================================= */
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    /* Set scrollbar width */
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    /* Set scrollbar track background */
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    /* Set scrollbar thumb background */
+    background: #888;
+    
+    /* Set scrollbar thumb border radius */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* Set scrollbar thumb hover background */
+    background: #555;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* =================================================================
+   18. PRINT STYLES - IN ẤN
+   ================================================================= */
+@media print {
+    /* Hide non-essential elements */
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    /* Set page margins */
+    @page {
+        margin: 2cm;
+    }
+    
+    /* Remove links */
+    a,
+    a::after {
+        text-decoration: underline;
+    }
+    
+    /* Show URLs */
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
+    
+    /* Prevent page breaks inside elements */
+    pre,
+    blockquote {
+        page-break-inside: avoid;
+    }
+    
+    /* Ensure table headers repeat on each page */
+    thead {
+        display: table-header-group;
+    }
+    
+    /* Prevent images from breaking across pages */
+    img {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    
+    /* Ensure headings don't break away from content */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* =================================================================
+   19. ACCESSIBILITY - KHẢ NĂNG TIẾP CẬN
+   ================================================================= */
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    /* Set focus outline */
+    outline: 3px solid #FF6B00;
+    outline-offset: 2px;
+}
+
+/* Skip to content link (hidden by default) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #FF6B00;
+    color: white;
+    padding: 8px 16px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Screen reader only class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+/* =================================================================
+   20. REDUCED MOTION - GIẢM CHUYỂN ĐỘNG
+   ================================================================= */
+@media (prefers-reduced-motion: reduce) {
+    /* Disable animations and transitions */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* =================================================================
+   21. DARK MODE SUPPORT - HỖ TRỢ CHẾ ĐỘ TỐI
+   ================================================================= */
+@media (prefers-color-scheme: dark) {
+    /* Auto-adjust colors for dark mode */
+    :root {
+        color-scheme: dark;
+    }
+}
+
+/* =================================================================
+   22. CUSTOM PROPERTIES FOR RESET - THUỘC TÍNH TÙY CHỈNH
+   ================================================================= */
+:root {
+    /* Reset-specific variables */
+    --reset-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --reset-font-size: 16px;
+    --reset-line-height: 1.5;
+    --reset-text-color: #1a1a1a;
+    --reset-bg-color: #ffffff;
+    --reset-focus-color: #FF6B00;
+    --reset-focus-offset: 2px;
+    --reset-focus-width: 3px;
+}
+
+/* =================================================================
+   END OF VMGS HSTAI 777 CSS RESET
+   ================================================================= */

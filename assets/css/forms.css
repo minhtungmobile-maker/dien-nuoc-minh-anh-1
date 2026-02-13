@@ -1,0 +1,1594 @@
+﻿/* ========================================
+   VMGS HSTAI 777 FORM SYSTEM
+   Complete Form Styles & Components
+   Version: 1.0.0
+   Author: VMGS Design Team
+   ======================================== */
+
+/* =================================================================
+   0. IMPORT VARIABLES (Reference only - import in main.css)
+   ================================================================= */
+/* Note: Variables should be imported before this file in main.css */
+
+/* =================================================================
+   1. FORM BASE STYLES - BIỂU MẪU CƠ BẢN
+   ================================================================= */
+
+/* Form base */
+form {
+    /* Width */
+    width: 100%;
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-6);
+}
+
+/* Form group */
+.form-group {
+    /* Margin bottom */
+    margin-bottom: var(--space-6);
+    
+    /* Position */
+    position: relative;
+}
+
+/* Form row - Horizontal layout */
+.form-row {
+    /* Display */
+    display: flex;
+    
+    /* Flex wrap */
+    flex-wrap: wrap;
+    
+    /* Negative margin */
+    margin: calc(var(--space-3) * -1);
+}
+
+/* Form column */
+.form-col {
+    /* Padding */
+    padding: var(--space-3);
+    
+    /* Flex */
+    flex: 1;
+    min-width: 200px;
+}
+
+/* =================================================================
+   2. FORM LABELS - NHÃN BIỂU MẪU
+   ================================================================= */
+
+/* Form label base */
+.form-label {
+    /* Display */
+    display: block;
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-medium);
+    
+    /* Text color */
+    color: var(--text-primary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-2);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-wide);
+    
+    /* Text transform */
+    text-transform: uppercase;
+}
+
+/* Required label indicator */
+.form-label.required::after {
+    /* Content */
+    content: ' *';
+    
+    /* Color */
+    color: var(--vmgs-danger);
+}
+
+/* Label with description */
+.form-label-with-desc {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+    
+    /* Gap */
+    gap: var(--space-1);
+}
+
+.form-label-with-desc .form-label-desc {
+    /* Font size */
+    font-size: var(--font-size-xs);
+    
+    /* Text color */
+    color: var(--text-tertiary);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-normal);
+    
+    /* Text transform */
+    text-transform: none;
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+/* =================================================================
+   3. FORM CONTROLS - ĐIỀU KHIỂN BIỂU MẪU
+   ================================================================= */
+
+/* Form control base */
+.form-control {
+    /* Width */
+    width: 100%;
+    
+    /* Padding */
+    padding: var(--space-3) var(--space-4);
+    
+    /* Font family */
+    font-family: var(--font-sans);
+    
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Line height */
+    line-height: 1.5;
+    
+    /* Text color */
+    color: var(--text-primary);
+    
+    /* Background color */
+    background-color: var(--bg-primary);
+    
+    /* Background clip */
+    background-clip: padding-box;
+    
+    /* Border */
+    border: 2px solid var(--border-primary);
+    
+    /* Border radius */
+    border-radius: var(--radius-md);
+    
+    /* Transition */
+    transition: var(--transition-normal);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xs);
+}
+
+/* Form control focus state */
+.form-control:focus {
+    /* Outline */
+    outline: none;
+    
+    /* Border color */
+    border-color: var(--vmgs-primary);
+    
+    /* Box shadow */
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+/* Form control hover state */
+.form-control:hover {
+    /* Border color */
+    border-color: var(--vmgs-primary-light);
+}
+
+/* Form control placeholder */
+.form-control::placeholder {
+    /* Text color */
+    color: var(--text-muted);
+    
+    /* Opacity */
+    opacity: 1;
+}
+
+/* Form control disabled state */
+.form-control:disabled,
+.form-control[readonly] {
+    /* Background color */
+    background-color: var(--vmgs-gray-50);
+    
+    /* Opacity */
+    opacity: 1;
+    
+    /* Cursor */
+    cursor: not-allowed;
+}
+
+/* Form control read-only state */
+.form-control[readonly] {
+    /* Background color */
+    background-color: var(--bg-secondary);
+}
+
+/* =================================================================
+   4. TEXT INPUTS - NHẬP VĂN BẢN
+   ================================================================= */
+
+/* Text input */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
+    /* Appearance */
+    appearance: none;
+}
+
+/* Search input */
+input[type="search"] {
+    /* Appearance */
+    appearance: none;
+    
+    /* Padding right for clear button */
+    padding-right: var(--space-8);
+}
+
+/* Search input clear button */
+input[type="search"]::-webkit-search-cancel-button {
+    /* Appearance */
+    appearance: none;
+}
+
+/* Number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    /* Appearance */
+    appearance: none;
+    
+    /* Margin */
+    margin: 0;
+}
+
+/* Date/Time input clear button */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"]::-webkit-clear-button,
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"]::-webkit-inner-spin-button {
+    /* Display */
+    display: none;
+}
+
+/* =================================================================
+   5. TEXTAREA - KHUNG VĂN BẢN
+   ================================================================= */
+
+/* Textarea base */
+textarea.form-control {
+    /* Min height */
+    min-height: 120px;
+    
+    /* Resize */
+    resize: vertical;
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Padding */
+    padding: var(--space-4);
+}
+
+/* Textarea auto-resize */
+textarea.form-control.auto-resize {
+    /* Resize */
+    resize: none;
+}
+
+/* Textarea with character counter */
+.textarea-with-counter {
+    /* Position */
+    position: relative;
+}
+
+.textarea-with-counter .char-counter {
+    /* Position */
+    position: absolute;
+    
+    /* Bottom */
+    bottom: var(--space-2);
+    
+    /* Right */
+    right: var(--space-4);
+    
+    /* Font size */
+    font-size: var(--font-size-xs);
+    
+    /* Text color */
+    color: var(--text-muted);
+}
+
+/* =================================================================
+   6. SELECT DROPDOWN - DANH SÁCH XỔ XUỐNG
+   ================================================================= */
+
+/* Select base */
+select.form-control {
+    /* Appearance */
+    appearance: none;
+    
+    /* Background image - Custom dropdown arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666666' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    
+    /* Background repeat */
+    background-repeat: no-repeat;
+    
+    /* Background position */
+    background-position: right var(--space-4) center;
+    
+    /* Background size */
+    background-size: 16px;
+    
+    /* Padding right */
+    padding-right: var(--space-10);
+}
+
+/* Select focus state */
+select.form-control:focus {
+    /* Background image color change */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FF6B00' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+}
+
+/* Select multiple */
+select.form-control[multiple],
+select.form-control[size] {
+    /* Min height */
+    min-height: 150px;
+    
+    /* Padding */
+    padding: var(--space-3);
+}
+
+/* Select multiple option */
+select.form-control[multiple] option,
+select.form-control[size] option {
+    /* Padding */
+    padding: var(--space-2) var(--space-3);
+}
+
+/* =================================================================
+   7. CHECKBOX & RADIO - Ô ĐÁNH DẤU & NÚT CHỌN
+   ================================================================= */
+
+/* Form check base */
+.form-check {
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: flex-start;
+    
+    /* Gap */
+    gap: var(--space-3);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-3);
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* User select */
+    user-select: none;
+}
+
+/* Form check input */
+.form-check-input {
+    /* Width */
+    width: 20px;
+    
+    /* Height */
+    height: 20px;
+    
+    /* Margin */
+    margin: 0;
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* Appearance */
+    appearance: none;
+    
+    /* Border */
+    border: 2px solid var(--border-primary);
+    
+    /* Border radius */
+    border-radius: var(--radius-sm);
+    
+    /* Background color */
+    background-color: var(--bg-primary);
+    
+    /* Transition */
+    transition: var(--transition-normal);
+    
+    /* Position */
+    position: relative;
+    
+    /* Flex shrink */
+    flex-shrink: 0;
+    
+    /* Align self */
+    align-self: flex-start;
+    
+    /* Margin top */
+    margin-top: 2px;
+}
+
+/* Form check input checked state */
+.form-check-input:checked {
+    /* Background color */
+    background-color: var(--vmgs-primary);
+    
+    /* Border color */
+    border-color: var(--vmgs-primary);
+}
+
+/* Form check input checked state - Checkmark */
+.form-check-input:checked::after {
+    /* Content */
+    content: '✓';
+    
+    /* Position */
+    position: absolute;
+    
+    /* Top */
+    top: 50%;
+    
+    /* Left */
+    left: 50%;
+    
+    /* Transform */
+    transform: translate(-50%, -50%);
+    
+    /* Color */
+    color: white;
+    
+    /* Font size */
+    font-size: 14px;
+    
+    /* Font weight */
+    font-weight: bold;
+    
+    /* Line height */
+    line-height: 1;
+}
+
+/* Form check input radio */
+.form-check-input[type="radio"] {
+    /* Border radius */
+    border-radius: 50%;
+}
+
+/* Form check input radio checked state */
+.form-check-input[type="radio"]:checked {
+    /* Background color */
+    background-color: var(--vmgs-primary);
+}
+
+/* Form check input radio checked state - Dot */
+.form-check-input[type="radio"]:checked::after {
+    /* Content */
+    content: '';
+    
+    /* Width */
+    width: 8px;
+    
+    /* Height */
+    height: 8px;
+    
+    /* Background color */
+    background-color: white;
+    
+    /* Border radius */
+    border-radius: 50%;
+}
+
+/* Form check input indeterminate state */
+.form-check-input:indeterminate {
+    /* Background color */
+    background-color: var(--vmgs-primary);
+    
+    /* Border color */
+    border-color: var(--vmgs-primary);
+}
+
+.form-check-input:indeterminate::after {
+    /* Content */
+    content: '';
+    
+    /* Position */
+    position: absolute;
+    
+    /* Top */
+    top: 50%;
+    
+    /* Left */
+    left: 50%;
+    
+    /* Transform */
+    transform: translate(-50%, -50%);
+    
+    /* Width */
+    width: 12px;
+    
+    /* Height */
+    height: 2px;
+    
+    /* Background color */
+    background-color: white;
+}
+
+/* Form check input disabled state */
+.form-check-input:disabled {
+    /* Opacity */
+    opacity: 0.5;
+    
+    /* Cursor */
+    cursor: not-allowed;
+}
+
+/* Form check label */
+.form-check-label {
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Text color */
+    color: var(--text-secondary);
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* Line height */
+    line-height: 1.5;
+}
+
+/* Form check input disabled + label */
+.form-check-input:disabled + .form-check-label {
+    /* Text color */
+    color: var(--text-muted);
+    
+    /* Cursor */
+    cursor: not-allowed;
+}
+
+/* Form check inline */
+.form-check-inline {
+    /* Display */
+    display: inline-flex;
+    
+    /* Margin right */
+    margin-right: var(--space-4);
+}
+
+/* =================================================================
+   8. SWITCH TOGGLE - CÔNG TẮC BẬT/TẮT
+   ================================================================= */
+
+/* Form switch base */
+.form-switch {
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Gap */
+    gap: var(--space-3);
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* User select */
+    user-select: none;
+}
+
+/* Form switch input */
+.form-switch-input {
+    /* Position */
+    position: relative;
+    
+    /* Display */
+    display: inline-block;
+    
+    /* Width */
+    width: 48px;
+    
+    /* Height */
+    height: 24px;
+    
+    /* Margin */
+    margin: 0;
+    
+    /* Cursor */
+    cursor: pointer;
+}
+
+/* Form switch input hidden */
+.form-switch-input input {
+    /* Opacity */
+    opacity: 0;
+    
+    /* Width */
+    width: 0;
+    
+    /* Height */
+    height: 0;
+}
+
+/* Form switch slider */
+.form-switch-slider {
+    /* Position */
+    position: absolute;
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* Top */
+    top: 0;
+    
+    /* Left */
+    left: 0;
+    
+    /* Right */
+    right: 0;
+    
+    /* Bottom */
+    bottom: 0;
+    
+    /* Background color */
+    background-color: var(--vmgs-gray-300);
+    
+    /* Transition */
+    transition: var(--transition-normal);
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+}
+
+/* Form switch slider before (knob) */
+.form-switch-slider:before {
+    /* Position */
+    position: absolute;
+    
+    /* Content */
+    content: "";
+    
+    /* Height */
+    height: 18px;
+    
+    /* Width */
+    width: 18px;
+    
+    /* Left */
+    left: 3px;
+    
+    /* Bottom */
+    bottom: 3px;
+    
+    /* Background color */
+    background-color: white;
+    
+    /* Transition */
+    transition: var(--transition-normal);
+    
+    /* Border radius */
+    border-radius: 50%;
+}
+
+/* Form switch input checked state */
+.form-switch-input input:checked + .form-switch-slider {
+    /* Background color */
+    background-color: var(--vmgs-primary);
+}
+
+/* Form switch input checked state - Knob position */
+.form-switch-input input:checked + .form-switch-slider:before {
+    /* Transform */
+    transform: translateX(24px);
+}
+
+/* Form switch input disabled state */
+.form-switch-input input:disabled + .form-switch-slider {
+    /* Opacity */
+    opacity: 0.5;
+    
+    /* Cursor */
+    cursor: not-allowed;
+}
+
+/* Form switch label */
+.form-switch-label {
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Text color */
+    color: var(--text-secondary);
+    
+    /* Cursor */
+    cursor: pointer;
+}
+
+/* =================================================================
+   9. FILE UPLOAD - TẢI LÊN TỆP
+   ================================================================= */
+
+/* Form file base */
+.form-file {
+    /* Position */
+    position: relative;
+    
+    /* Overflow */
+    overflow: hidden;
+}
+
+/* Form file input */
+.form-file-input {
+    /* Position */
+    position: absolute;
+    
+    /* Top */
+    top: 0;
+    
+    /* Left */
+    left: 0;
+    
+    /* Width */
+    width: 100%;
+    
+    /* Height */
+    height: 100%;
+    
+    /* Opacity */
+    opacity: 0;
+    
+    /* Cursor */
+    cursor: pointer;
+}
+
+/* Form file label */
+.form-file-label {
+    /* Display */
+    display: block;
+    
+    /* Padding */
+    padding: var(--space-3) var(--space-4);
+    
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Text color */
+    color: var(--text-secondary);
+    
+    /* Background color */
+    background-color: var(--bg-secondary);
+    
+    /* Border */
+    border: 2px dashed var(--border-primary);
+    
+    /* Border radius */
+    border-radius: var(--radius-md);
+    
+    /* Text align */
+    text-align: center;
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* Transition */
+    transition: var(--transition-normal);
+}
+
+/* Form file label hover state */
+.form-file-label:hover {
+    /* Border color */
+    border-color: var(--vmgs-primary);
+    
+    /* Background color */
+    background-color: var(--bg-tertiary);
+}
+
+/* Form file text */
+.form-file-text {
+    /* Margin top */
+    margin-top: var(--space-2);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Text color */
+    color: var(--text-muted);
+}
+
+/* Form file with preview */
+.form-file-with-preview {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+    
+    /* Gap */
+    gap: var(--space-3);
+}
+
+/* File preview container */
+.file-preview {
+    /* Display */
+    display: flex;
+    
+    /* Flex wrap */
+    flex-wrap: wrap;
+    
+    /* Gap */
+    gap: var(--space-2);
+}
+
+/* File preview item */
+.file-preview-item {
+    /* Max width */
+    max-width: 100px;
+    
+    /* Border radius */
+    border-radius: var(--radius-sm);
+    
+    /* Overflow */
+    overflow: hidden;
+    
+    /* Border */
+    border: 2px solid var(--border-primary);
+}
+
+/* File preview image */
+.file-preview-item img {
+    /* Width */
+    width: 100%;
+    
+    /* Height */
+    height: auto;
+    
+    /* Display */
+    display: block;
+}
+
+/* =================================================================
+   10. RANGE SLIDER - THANH TRƯỢT
+   ================================================================= */
+
+/* Form range base */
+.form-range {
+    /* Width */
+    width: 100%;
+    
+    /* Height */
+    height: 6px;
+    
+    /* Appearance */
+    appearance: none;
+    
+    /* Background color */
+    background-color: var(--vmgs-gray-200);
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+    
+    /* Outline */
+    outline: none;
+    
+    /* Transition */
+    transition: var(--transition-normal);
+}
+
+/* WebKit range thumb */
+.form-range::-webkit-slider-thumb {
+    /* Appearance */
+    appearance: none;
+    
+    /* Width */
+    width: 20px;
+    
+    /* Height */
+    height: 20px;
+    
+    /* Background color */
+    background-color: var(--vmgs-primary);
+    
+    /* Border radius */
+    border-radius: 50%;
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* Transition */
+    transition: var(--transition-normal);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-sm);
+}
+
+/* WebKit range thumb hover state */
+.form-range::-webkit-slider-thumb:hover {
+    /* Transform */
+    transform: scale(1.2);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* WebKit range thumb active state */
+.form-range::-webkit-slider-thumb:active {
+    /* Box shadow */
+    box-shadow: var(--shadow-lg);
+}
+
+/* Mozilla range thumb */
+.form-range::-moz-range-thumb {
+    /* Width */
+    width: 20px;
+    
+    /* Height */
+    height: 20px;
+    
+    /* Background color */
+    background-color: var(--vmgs-primary);
+    
+    /* Border */
+    border: none;
+    
+    /* Border radius */
+    border-radius: 50%;
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* Transition */
+    transition: var(--transition-normal);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-sm);
+}
+
+/* Mozilla range thumb hover state */
+.form-range::-moz-range-thumb:hover {
+    /* Transform */
+    transform: scale(1.2);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Mozilla range thumb active state */
+.form-range::-moz-range-thumb:active {
+    /* Box shadow */
+    box-shadow: var(--shadow-lg);
+}
+
+/* WebKit range track */
+.form-range::-webkit-slider-runnable-track {
+    /* Height */
+    height: 6px;
+    
+    /* Background color */
+    background-color: var(--vmgs-gray-200);
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+}
+
+/* Mozilla range track */
+.form-range::-moz-range-track {
+    /* Height */
+    height: 6px;
+    
+    /* Background color */
+    background-color: var(--vmgs-gray-200);
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+}
+
+/* Range with value display */
+.range-with-value {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+    
+    /* Gap */
+    gap: var(--space-3);
+}
+
+/* Range value display */
+.range-value {
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Text color */
+    color: var(--text-secondary);
+    
+    /* Display */
+    display: flex;
+    
+    /* Justify content */
+    justify-content: space-between;
+}
+
+/* =================================================================
+   11. FORM VALIDATION - XÁC THỰC BIỂU MẪU
+   ================================================================= */
+
+/* Valid state */
+.form-control.is-valid {
+    /* Border color */
+    border-color: var(--vmgs-success);
+}
+
+/* Valid state focus */
+.form-control.is-valid:focus {
+    /* Box shadow */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+/* Valid feedback */
+.form-feedback.valid {
+    /* Display */
+    display: block;
+    
+    /* Margin top */
+    margin-top: var(--space-2);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Text color */
+    color: var(--vmgs-success);
+    
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Gap */
+    gap: var(--space-2);
+}
+
+/* Invalid state */
+.form-control.is-invalid {
+    /* Border color */
+    border-color: var(--vmgs-danger);
+}
+
+/* Invalid state focus */
+.form-control.is-invalid:focus {
+    /* Box shadow */
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+/* Invalid feedback */
+.form-feedback.invalid {
+    /* Display */
+    display: block;
+    
+    /* Margin top */
+    margin-top: var(--space-2);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Text color */
+    color: var(--vmgs-danger);
+    
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Gap */
+    gap: var(--space-2);
+}
+
+/* Validation icon */
+.form-validation-icon {
+    /* Position */
+    position: absolute;
+    
+    /* Top */
+    top: 50%;
+    
+    /* Right */
+    right: var(--space-4);
+    
+    /* Transform */
+    transform: translateY(-50%);
+    
+    /* Font size */
+    font-size: var(--font-size-lg);
+    
+    /* Z-index */
+    z-index: 10;
+}
+
+/* Valid icon */
+.form-validation-icon.valid {
+    /* Color */
+    color: var(--vmgs-success);
+}
+
+/* Invalid icon */
+.form-validation-icon.invalid {
+    /* Color */
+    color: var(--vmgs-danger);
+}
+
+/* =================================================================
+   12. FORM LAYOUTS - BỐ CỤC BIỂU MẪU
+   ================================================================= */
+
+/* Inline form */
+.form-inline {
+    /* Display */
+    display: flex;
+    
+    /* Flex wrap */
+    flex-wrap: wrap;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Gap */
+    gap: var(--space-4);
+}
+
+/* Inline form group */
+.form-inline .form-group {
+    /* Margin bottom */
+    margin-bottom: 0;
+}
+
+/* Horizontal form */
+.form-horizontal .form-group {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .form-horizontal .form-group {
+        /* Flex direction */
+        flex-direction: row;
+        
+        /* Align items */
+        align-items: flex-start;
+    }
+    
+    .form-horizontal .form-label {
+        /* Width */
+        width: 200px;
+        
+        /* Margin top */
+        margin-top: var(--space-3);
+    }
+    
+    .form-horizontal .form-control {
+        /* Flex */
+        flex: 1;
+    }
+}
+
+/* Stacked form */
+.form-stacked .form-group {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+}
+
+/* =================================================================
+   13. FORM HELP TEXT - VĂN BẢN TRỢ GIÚP
+   ================================================================= */
+
+/* Form help text */
+.form-help-text {
+    /* Display */
+    display: block;
+    
+    /* Margin top */
+    margin-top: var(--space-2);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Text color */
+    color: var(--text-muted);
+    
+    /* Line height */
+    line-height: var(--line-height-normal);
+}
+
+/* Form help text with icon */
+.form-help-text.with-icon {
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: flex-start;
+    
+    /* Gap */
+    gap: var(--space-2);
+}
+
+/* =================================================================
+   14. FORM INPUT GROUPS - NHÓM ĐẦU VÀO
+   ================================================================= */
+
+/* Input group base */
+.input-group {
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: stretch;
+    
+    /* Width */
+    width: 100%;
+}
+
+/* Input group prepend */
+.input-group-prepend,
+.input-group-append {
+    /* Display */
+    display: flex;
+}
+
+/* Input group text */
+.input-group-text {
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Padding */
+    padding: var(--space-3) var(--space-4);
+    
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Text color */
+    color: var(--text-secondary);
+    
+    /* Background color */
+    background-color: var(--bg-secondary);
+    
+    /* Border */
+    border: 2px solid var(--border-primary);
+    
+    /* Border radius */
+    border-radius: var(--radius-md);
+}
+
+/* Input group prepend first */
+.input-group > .input-group-prepend:first-child > .input-group-text,
+.input-group > .input-group-prepend:first-child > .btn {
+    /* Border radius */
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+/* Input group append last */
+.input-group > .input-group-append:last-child > .input-group-text,
+.input-group > .input-group-append:last-child > .btn {
+    /* Border radius */
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* Input group with form control */
+.input-group .form-control {
+    /* Flex */
+    flex: 1;
+    
+    /* Min width */
+    min-width: 0;
+    
+    /* Border radius */
+    border-radius: 0;
+}
+
+/* Input group first form control */
+.input-group > .form-control:first-child {
+    /* Border radius */
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+/* Input group last form control */
+.input-group > .form-control:last-child {
+    /* Border radius */
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* =================================================================
+   15. FORM INPUT WITH ICON - ĐẦU VÀO CÓ BIỂU TƯỢNG
+   ================================================================= */
+
+/* Input with icon base */
+.input-with-icon {
+    /* Position */
+    position: relative;
+}
+
+/* Input with icon icon */
+.input-with-icon i {
+    /* Position */
+    position: absolute;
+    
+    /* Left */
+    left: var(--space-4);
+    
+    /* Top */
+    top: 50%;
+    
+    /* Transform */
+    transform: translateY(-50%);
+    
+    /* Text color */
+    color: var(--text-muted);
+    
+    /* Font size */
+    font-size: var(--font-size-lg);
+    
+    /* Z-index */
+    z-index: 5;
+}
+
+/* Input with icon form control */
+.input-with-icon .form-control {
+    /* Padding left */
+    padding-left: var(--space-10);
+}
+
+/* Input with icon right */
+.input-with-icon-right i {
+    /* Left */
+    left: auto;
+    
+    /* Right */
+    right: var(--space-4);
+}
+
+/* Input with icon right form control */
+.input-with-icon-right .form-control {
+    /* Padding left */
+    padding-left: var(--space-4);
+    
+    /* Padding right */
+    padding-right: var(--space-10);
+}
+
+/* =================================================================
+   16. FORM RESPONSIVE - BIỂU MẪU RESPONSIVE
+   ================================================================= */
+
+/* Small screens */
+@media (max-width: 575.98px) {
+    /* Full width form controls */
+    .form-control {
+        /* Font size */
+        font-size: var(--font-size-base);
+    }
+    
+    /* Stacked form on mobile */
+    .form-horizontal .form-group {
+        /* Flex direction */
+        flex-direction: column;
+    }
+    
+    .form-horizontal .form-label {
+        /* Width */
+        width: 100%;
+        
+        /* Margin top */
+        margin-top: 0;
+        
+        /* Margin bottom */
+        margin-bottom: var(--space-2);
+    }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+    /* Restore horizontal form */
+    .form-horizontal .form-group {
+        /* Flex direction */
+        flex-direction: row;
+    }
+}
+
+/* =================================================================
+   17. FORM ACCESSIBILITY - KHẢ NĂNG TIẾP CẬN
+   ================================================================= */
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    /* Increase form control contrast */
+    .form-control {
+        /* Border */
+        border: 3px solid currentColor;
+    }
+    
+    /* Increase checkbox/radio contrast */
+    .form-check-input {
+        /* Border */
+        border: 3px solid currentColor;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    /* Remove transitions */
+    .form-control,
+    .form-check-input,
+    .form-switch-slider {
+        /* Transition */
+        transition: none !important;
+    }
+}
+
+/* =================================================================
+   18. FORM DARK MODE - CHẾ ĐỘ TỐI
+   ================================================================= */
+
+/* Auto dark mode */
+@media (prefers-color-scheme: dark) {
+    /* Form control */
+    .form-control {
+        /* Background color */
+        background-color: var(--vmgs-gray-900);
+        
+        /* Text color */
+        color: var(--text-light);
+        
+        /* Border color */
+        border-color: var(--vmgs-gray-700);
+    }
+    
+    .form-control:focus {
+        /* Border color */
+        border-color: var(--vmgs-primary-light);
+    }
+    
+    /* Form label */
+    .form-label {
+        /* Text color */
+        color: var(--text-light);
+    }
+    
+    /* Form help text */
+    .form-help-text {
+        /* Text color */
+        color: var(--text-tertiary);
+    }
+}
+
+/* Explicit dark mode */
+[data-theme="dark"] .form-control {
+    /* Background color */
+    background-color: var(--vmgs-gray-900);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Border color */
+    border-color: var(--vmgs-gray-700);
+}
+
+[data-theme="dark"] .form-control:focus {
+    /* Border color */
+    border-color: var(--vmgs-primary-light);
+}
+
+[data-theme="dark"] .form-label {
+    /* Text color */
+    color: var(--text-light);
+}
+
+[data-theme="dark"] .form-help-text {
+    /* Text color */
+    color: var(--text-tertiary);
+}
+
+/* =================================================================
+   19. FORM PRINT STYLES - IN ẤN
+   ================================================================= */
+
+@media print {
+    /* Hide form elements in print */
+    .form-control {
+        /* Background */
+        background: white !important;
+        
+        /* Border */
+        border: 1px solid black !important;
+    }
+    
+    /* Show form values */
+    input::after,
+    textarea::after {
+        /* Content */
+        content: attr(value);
+    }
+}
+
+/* =================================================================
+   20. CUSTOM FORM COMPONENTS - THÀNH PHẦN TÙY CHỈNH
+   ================================================================= */
+
+/* Search form */
+.search-form {
+    /* Display */
+    display: flex;
+    
+    /* Gap */
+    gap: var(--space-2);
+}
+
+/* Search form input */
+.search-form .form-control {
+    /* Border radius */
+    border-radius: var(--radius-full) 0 0 var(--radius-full);
+}
+
+/* Search form button */
+.search-form .btn {
+    /* Border radius */
+    border-radius: 0 var(--radius-full) var(--radius-full) 0;
+}
+
+/* Login form */
+.login-form {
+    /* Max width */
+    max-width: 400px;
+    
+    /* Margin */
+    margin: 0 auto;
+}
+
+/* Register form */
+.register-form {
+    /* Max width */
+    max-width: 500px;
+    
+    /* Margin */
+    margin: 0 auto;
+}
+
+/* Contact form */
+.contact-form {
+    /* Max width */
+    max-width: 600px;
+    
+    /* Margin */
+    margin: 0 auto;
+}
+
+/* =================================================================
+   END OF VMGS HSTAI 777 FORM SYSTEM
+   ================================================================= */

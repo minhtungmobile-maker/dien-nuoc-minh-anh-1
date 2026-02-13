@@ -1,0 +1,1667 @@
+﻿/* ========================================
+   VMGS HSTAI 777 CARD SYSTEM
+   Complete Card Styles & Components
+   Version: 1.0.0
+   Author: VMGS Design Team
+   ======================================== */
+
+/* =================================================================
+   0. IMPORT VARIABLES (Reference only - import in main.css)
+   ================================================================= */
+/* Note: Variables should be imported before this file in main.css */
+
+/* =================================================================
+   1. CARD BASE STYLES - THẺ CƠ BẢN
+   ================================================================= */
+
+/* Card base */
+.card {
+    /* Position */
+    position: relative;
+    
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+    
+    /* Min width */
+    min-width: 0;
+    
+    /* Word wrap */
+    word-wrap: break-word;
+    
+    /* Background color */
+    background-color: var(--bg-primary);
+    
+    /* Background clip */
+    background-clip: border-box;
+    
+    /* Border */
+    border: 1px solid var(--border-primary);
+    
+    /* Border radius */
+    border-radius: var(--radius-xl);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+    
+    /* Transition */
+    transition: var(--transition-normal);    
+    /* Overflow */
+    overflow: hidden;
+}
+
+/* Card hover effect */
+.card:hover {
+    /* Transform */
+    transform: translateY(-5px);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-lg);
+}
+
+/* Card link */
+.card a {
+    /* Text decoration */
+    text-decoration: none;
+}
+
+/* =================================================================
+   2. CARD VARIANTS - BIẾN THỂ THẺ
+   ================================================================= */
+
+/* Card with border */
+.card-border {
+    /* Border */
+    border: 1px solid var(--border-primary);
+    
+    /* Box shadow */
+    box-shadow: none;
+}
+
+/* Card with shadow */
+.card-shadow {
+    /* Border */
+    border: none;
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-lg);
+}
+
+/* Card with inner shadow */
+.card-inner-shadow {
+    /* Box shadow */
+    box-shadow: var(--shadow-inner);
+}
+
+/* Card with gradient background */
+.card-gradient {    /* Background */
+    background: var(--bg-gradient-1);
+    
+    /* Color */
+    color: var(--text-light);
+    
+    /* Border */
+    border: none;
+}
+
+/* Card with gradient hover */
+.card-gradient:hover {
+    /* Transform */
+    transform: translateY(-5px);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-glow);
+}
+
+/* Card with image overlay */
+.card-overlay {
+    /* Position */
+    position: relative;
+}
+
+/* Card with full height */
+.card-full-height {
+    /* Height */
+    height: 100%;
+    
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+}
+
+/* Card with equal height in grid */
+.card-equal-height {
+    /* Flex */
+    display: flex;
+    flex-direction: column;
+}
+
+/* =================================================================
+   3. CARD COMPONENTS - THÀNH PHẦN THẺ
+   ================================================================= */
+
+/* Card header */
+.card-header {    /* Padding */
+    padding: var(--space-5) var(--space-6);
+    
+    /* Margin bottom */
+    margin-bottom: 0;
+    
+    /* Border bottom */
+    border-bottom: 1px solid var(--border-primary);
+    
+    /* Background color */
+    background-color: var(--bg-secondary);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Card header with no border */
+.card-header-no-border {
+    /* Border bottom */
+    border-bottom: none;
+}
+
+/* Card body */
+.card-body {
+    /* Flex */
+    flex: 1 1 auto;
+    
+    /* Padding */
+    padding: var(--space-6);
+    
+    /* Min height */
+    min-height: 1px;
+}
+
+/* Card body with no padding */
+.card-body-no-padding {
+    /* Padding */
+    padding: 0;
+}
+
+/* Card footer */
+.card-footer {
+    /* Padding */
+    padding: var(--space-5) var(--space-6);
+    
+    /* Margin top */
+    margin-top: 0;
+    
+    /* Border top */
+    border-top: 1px solid var(--border-primary);    
+    /* Background color */
+    background-color: var(--bg-secondary);
+}
+
+/* Card footer with no border */
+.card-footer-no-border {
+    /* Border top */
+    border-top: none;
+}
+
+/* =================================================================
+   4. CARD CONTENT - NỘI DUNG THẺ
+   ================================================================= */
+
+/* Card title */
+.card-title {
+    /* Font size */
+    font-size: var(--font-size-2xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Line height */
+    line-height: var(--line-height-tight);
+    
+    /* Color */
+    color: var(--text-primary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-3);
+}
+
+/* Card title link */
+.card-title a {
+    /* Color */
+    color: inherit;
+}
+
+/* Card title link hover */
+.card-title a:hover {
+    /* Color */
+    color: var(--vmgs-primary);
+}
+
+/* Card subtitle */
+.card-subtitle {
+    /* Font size */
+    font-size: var(--font-size-base);
+        /* Font weight */
+    font-weight: var(--font-weight-medium);
+    
+    /* Line height */
+    line-height: var(--line-height-normal);
+    
+    /* Color */
+    color: var(--text-tertiary);
+    
+    /* Margin top */
+    margin-top: calc(var(--space-3) * -1);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+}
+
+/* Card text */
+.card-text {
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Color */
+    color: var(--text-secondary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+}
+
+/* Card link */
+.card-link {
+    /* Display */
+    display: inline-block;
+    
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-medium);
+    
+    /* Color */
+    color: var(--vmgs-primary);
+    
+    /* Transition */
+    transition: var(--transition-color);
+}
+
+/* Card link hover */.card-link:hover {
+    /* Color */
+    color: var(--vmgs-primary-dark);
+    
+    /* Text decoration */
+    text-decoration: underline;
+}
+
+/* Card link with icon */
+.card-link.with-icon {
+    /* Display */
+    display: inline-flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Gap */
+    gap: var(--space-2);
+}
+
+/* =================================================================
+   5. CARD IMAGE - HÌNH ẢNH THẺ
+   ================================================================= */
+
+/* Card image top */
+.card-img-top {
+    /* Width */
+    width: 100%;
+    
+    /* Height */
+    height: auto;
+    
+    /* Display */
+    display: block;
+    
+    /* Object fit */
+    object-fit: cover;
+}
+
+/* Card image bottom */
+.card-img-bottom {
+    /* Width */
+    width: 100%;
+    
+    /* Height */
+    height: auto;
+    
+    /* Display */
+    display: block;
+}
+/* Card image left (for horizontal cards) */
+.card-img-left {
+    /* Width */
+    width: 100%;
+    
+    /* Height */
+    height: 100%;
+    
+    /* Object fit */
+    object-fit: cover;
+}
+
+/* Card image overlay */
+.card-img-overlay {
+    /* Position */
+    position: absolute;
+    
+    /* Top */
+    top: 0;
+    
+    /* Right */
+    right: 0;
+    
+    /* Bottom */
+    bottom: 0;
+    
+    /* Left */
+    left: 0;
+    
+    /* Padding */
+    padding: var(--space-6);
+    
+    /* Background */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+    
+    /* Color */
+    color: var(--text-light);
+    
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+    
+    /* Justify content */
+    justify-content: flex-end;
+}
+
+/* Card image with fixed height */.card-img-fixed {
+    /* Height */
+    height: 200px;
+    
+    /* Object fit */
+    object-fit: cover;
+}
+
+/* Card image rounded */
+.card-img-rounded {
+    /* Border radius */
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+/* =================================================================
+   6. CARD LAYOUTS - BỐ CỤC THẺ
+   ================================================================= */
+
+/* Card group */
+.card-group {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .card-group {
+        /* Flex direction */
+        flex-direction: row;
+        
+        /* Flex wrap */
+        flex-wrap: wrap;
+    }
+    
+    .card-group .card {
+        /* Flex */
+        flex: 1 0 0%;
+        
+        /* Margin right */
+        margin-right: 0;
+        
+        /* Margin left */
+        margin-left: 0;
+    }
+    
+    .card-group .card:not(:first-child) {
+        /* Border left */
+        border-left: 0;        
+        /* Border top left radius */
+        border-top-left-radius: 0;
+        
+        /* Border bottom left radius */
+        border-bottom-left-radius: 0;
+    }
+    
+    .card-group .card:not(:last-child) {
+        /* Border right */
+        border-right: 0;
+        
+        /* Border top right radius */
+        border-top-right-radius: 0;
+        
+        /* Border bottom right radius */
+        border-bottom-right-radius: 0;
+    }
+}
+
+/* Card deck */
+.card-deck {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .card-deck {
+        /* Flex flow */
+        flex-flow: row wrap;
+        
+        /* Margin */
+        margin-right: calc(var(--space-4) * -1);
+        margin-left: calc(var(--space-4) * -1);
+    }
+    
+    .card-deck .card {
+        /* Flex */
+        flex: 1 0 0%;
+        
+        /* Margin */
+        margin-right: var(--space-4);
+        margin-left: var(--space-4);
+    }
+}
+
+/* Card columns */.card-columns {
+    /* Column count */
+    column-count: 1;
+    
+    /* Column gap */
+    column-gap: var(--space-4);
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        /* Column count */
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        /* Column count */
+        column-count: 3;
+    }
+}
+
+.card-columns .card {
+    /* Display */
+    display: inline-block;
+    
+    /* Width */
+    width: 100%;
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+}
+
+/* Card horizontal */
+.card-horizontal {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: row;
+    
+    /* Width */
+    width: 100%;
+}
+
+.card-horizontal .card-img-side {
+    /* Flex */
+    flex: 0 0 300px;
+    
+    /* Height */    height: auto;
+    
+    /* Object fit */
+    object-fit: cover;
+}
+
+.card-horizontal .card-body {
+    /* Flex */
+    flex: 1;
+}
+
+@media (max-width: 767.98px) {
+    .card-horizontal {
+        /* Flex direction */
+        flex-direction: column;
+    }
+    
+    .card-horizontal .card-img-side {
+        /* Flex */
+        flex: 0 0 auto;
+        
+        /* Width */
+        width: 100%;
+        
+        /* Height */
+        height: 250px;
+    }
+}
+
+/* =================================================================
+   7. CARD BADGE - HUY HIỆU THẺ
+   ================================================================= */
+
+/* Card badge */
+.card-badge {
+    /* Position */
+    position: absolute;
+    
+    /* Top */
+    top: var(--space-4);
+    
+    /* Right */
+    right: var(--space-4);
+    
+    /* Z-index */
+    z-index: 10;
+}
+
+/* Card badge top left */
+.card-badge-top-left {    /* Top */
+    top: var(--space-4);
+    
+    /* Left */
+    left: var(--space-4);
+    
+    /* Right */
+    right: auto;
+}
+
+/* Card badge bottom right */
+.card-badge-bottom-right {
+    /* Top */
+    top: auto;
+    
+    /* Bottom */
+    bottom: var(--space-4);
+    
+    /* Right */
+    right: var(--space-4);
+}
+
+/* Card badge bottom left */
+.card-badge-bottom-left {
+    /* Top */
+    top: auto;
+    
+    /* Bottom */
+    bottom: var(--space-4);
+    
+    /* Left */
+    left: var(--space-4);
+    
+    /* Right */
+    right: auto;
+}
+
+/* =================================================================
+   8. CARD STATES - TRẠNG THÁI THẺ
+   ================================================================= */
+
+/* Card active state */
+.card.active {
+    /* Border color */
+    border-color: var(--vmgs-primary);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-focus);
+}
+/* Card disabled state */
+.card.disabled {
+    /* Opacity */
+    opacity: 0.6;
+    
+    /* Pointer events */
+    pointer-events: none;
+}
+
+/* Card selected state */
+.card.selected {
+    /* Border */
+    border: 2px solid var(--vmgs-primary);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md), var(--shadow-focus);
+}
+
+/* =================================================================
+   9. CARD UTILITIES - TIỆN ÍCH THẺ
+   ================================================================= */
+
+/* Card with no shadow */
+.card-no-shadow {
+    /* Box shadow */
+    box-shadow: none;
+}
+
+/* Card with small shadow */
+.card-shadow-sm {
+    /* Box shadow */
+    box-shadow: var(--shadow-sm);
+}
+
+/* Card with large shadow */
+.card-shadow-lg {
+    /* Box shadow */
+    box-shadow: var(--shadow-lg);
+}
+
+/* Card with extra large shadow */
+.card-shadow-xl {
+    /* Box shadow */
+    box-shadow: var(--shadow-xl);
+}
+
+/* Card with rounded corners */
+.card-rounded {
+    /* Border radius */
+    border-radius: var(--radius-2xl);}
+
+/* Card with square corners */
+.card-square {
+    /* Border radius */
+    border-radius: 0;
+}
+
+/* Card with full rounded corners */
+.card-rounded-full {
+    /* Border radius */
+    border-radius: var(--radius-full);
+}
+
+/* Card clickable */
+.card-clickable {
+    /* Cursor */
+    cursor: pointer;
+}
+
+.card-clickable:hover {
+    /* Transform */
+    transform: translateY(-5px);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-lg);
+}
+
+/* Card with hover lift */
+.card-hover-lift {
+    /* Transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-lift:hover {
+    /* Transform */
+    transform: translateY(-10px);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xl);
+}
+
+/* Card with hover scale */
+.card-hover-scale {
+    /* Transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-scale:hover {
+    /* Transform */    transform: scale(1.03);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xl);
+}
+
+/* Card with hover rotate */
+.card-hover-rotate {
+    /* Transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-rotate:hover {
+    /* Transform */
+    transform: rotate(2deg) translateY(-5px);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xl);
+}
+
+/* =================================================================
+   10. CARD GRID - LƯỚI THẺ
+   ================================================================= */
+
+/* Card grid */
+.card-grid {
+    /* Display */
+    display: grid;
+    
+    /* Grid template columns */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    
+    /* Gap */
+    gap: var(--space-6);
+}
+
+/* Card grid with 2 columns */
+.card-grid-2 {
+    /* Grid template columns */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Card grid with 3 columns */
+.card-grid-3 {
+    /* Grid template columns */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card grid with 4 columns */
+.card-grid-4 {    /* Grid template columns */
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 767.98px) {
+    .card-grid-2,
+    .card-grid-3,
+    .card-grid-4 {
+        /* Grid template columns */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =================================================================
+   11. CARD WITH ICON - THẺ CÓ BIỂU TƯỢNG
+   ================================================================= */
+
+/* Card icon container */
+.card-icon {
+    /* Width */
+    width: 60px;
+    
+    /* Height */
+    height: 60px;
+    
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Justify content */
+    justify-content: center;
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+    
+    /* Background */
+    background: var(--bg-gradient-1);
+    
+    /* Color */
+    color: white;
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+    
+    /* Font size */
+    font-size: var(--font-size-3xl);
+}
+/* Card icon small */
+.card-icon-sm {
+    /* Width */
+    width: 40px;
+    
+    /* Height */
+    height: 40px;
+    
+    /* Font size */
+    font-size: var(--font-size-2xl);
+}
+
+/* Card icon large */
+.card-icon-lg {
+    /* Width */
+    width: 80px;
+    
+    /* Height */
+    height: 80px;
+    
+    /* Font size */
+    font-size: var(--font-size-4xl);
+}
+
+/* =================================================================
+   12. CARD WITH STATISTICS - THẺ THỐNG KÊ
+   ================================================================= */
+
+/* Card stats */
+.card-stats {
+    /* Text align */
+    text-align: center;
+}
+
+/* Card stats number */
+.card-stats-number {
+    /* Font size */
+    font-size: var(--font-size-5xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Line height */
+    line-height: 1;
+    
+    /* Color */
+    color: var(--vmgs-primary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-2);}
+
+/* Card stats label */
+.card-stats-label {
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-medium);
+    
+    /* Color */
+    color: var(--text-tertiary);
+    
+    /* Text transform */
+    text-transform: uppercase;
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Card stats with icon */
+.card-stats-with-icon {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Text align */
+    text-align: center;
+}
+
+/* =================================================================
+   13. CARD WITH PRICING - THẺ GIÁ CẢ
+   ================================================================= */
+
+/* Card pricing */
+.card-pricing {
+    /* Text align */
+    text-align: center;
+    
+    /* Position */
+    position: relative;
+    
+    /* Overflow */
+    overflow: hidden;
+}
+/* Card pricing header */
+.card-pricing-header {
+    /* Padding */
+    padding: var(--space-8) var(--space-6) var(--space-6);
+    
+    /* Background */
+    background: var(--bg-gradient-1);
+    
+    /* Color */
+    color: white;
+}
+
+/* Card pricing price */
+.card-pricing-price {
+    /* Font size */
+    font-size: var(--font-size-6xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Line height */
+    line-height: 1;
+    
+    /* Margin */
+    margin: var(--space-4) 0;
+}
+
+/* Card pricing currency */
+.card-pricing-currency {
+    /* Font size */
+    font-size: var(--font-size-2xl);
+    
+    /* Vertical align */
+    vertical-align: super;
+}
+
+/* Card pricing period */
+.card-pricing-period {
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-normal);
+    
+    /* Color */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Card pricing features */.card-pricing-features {
+    /* List style */
+    list-style: none;
+    
+    /* Padding */
+    padding: 0;
+    
+    /* Margin */
+    margin: var(--space-6) 0;
+}
+
+/* Card pricing feature item */
+.card-pricing-features li {
+    /* Padding */
+    padding: var(--space-3) 0;
+    
+    /* Border bottom */
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.card-pricing-features li:last-child {
+    /* Border bottom */
+    border-bottom: none;
+}
+
+/* Card pricing featured */
+.card-pricing-featured {
+    /* Transform */
+    transform: scale(1.05);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xl);
+    
+    /* Z-index */
+    z-index: 10;
+}
+
+.card-pricing-featured .card-pricing-header {
+    /* Background */
+    background: var(--bg-gradient-4);
+}
+
+@media (max-width: 767.98px) {
+    .card-pricing-featured {
+        /* Transform */
+        transform: scale(1);
+    }
+}
+
+/* =================================================================   14. CARD WITH TESTIMONIAL - THẺ ĐÁNH GIÁ
+   ================================================================= */
+
+/* Card testimonial */
+.card-testimonial {
+    /* Position */
+    position: relative;
+    
+    /* Padding */
+    padding: var(--space-8);
+    
+    /* Text align */
+    text-align: center;
+}
+
+/* Card testimonial quote */
+.card-testimonial-quote {
+    /* Font size */
+    font-size: var(--font-size-6xl);
+    
+    /* Color */
+    color: var(--vmgs-primary);
+    
+    /* Opacity */
+    opacity: 0.2;
+    
+    /* Line height */
+    line-height: 1;
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+}
+
+/* Card testimonial text */
+.card-testimonial-text {
+    /* Font style */
+    font-style: italic;
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-5);
+}
+
+/* Card testimonial author */
+.card-testimonial-author {
+    /* Display */
+    display: flex;
+        /* Flex direction */
+    flex-direction: column;
+    
+    /* Align items */
+    align-items: center;
+}
+
+/* Card testimonial avatar */
+.card-testimonial-avatar {
+    /* Width */
+    width: 60px;
+    
+    /* Height */
+    height: 60px;
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-3);
+    
+    /* Background */
+    background: var(--bg-gradient-1);
+    
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Justify content */
+    justify-content: center;
+    
+    /* Color */
+    color: white;
+    
+    /* Font size */
+    font-size: var(--font-size-2xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+}
+
+/* Card testimonial name */
+.card-testimonial-name {
+    /* Font size */
+    font-size: var(--font-size-lg);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);    
+    /* Color */
+    color: var(--text-primary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-1);
+}
+
+/* Card testimonial role */
+.card-testimonial-role {
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Color */
+    color: var(--text-tertiary);
+}
+
+/* =================================================================
+   15. CARD WITH TEAM - THẺ ĐỘI NGŨ
+   ================================================================= */
+
+/* Card team */
+.card-team {
+    /* Text align */
+    text-align: center;
+}
+
+/* Card team image */
+.card-team-img {
+    /* Width */
+    width: 120px;
+    
+    /* Height */
+    height: 120px;
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+    
+    /* Margin */
+    margin: 0 auto var(--space-4);
+    
+    /* Object fit */
+    object-fit: cover;
+    
+    /* Border */
+    border: 4px solid var(--bg-primary);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+/* Card team name */
+.card-team-name {
+    /* Font size */
+    font-size: var(--font-size-2xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Color */
+    color: var(--text-primary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-1);
+}
+
+/* Card team role */
+.card-team-role {
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-medium);
+    
+    /* Color */
+    color: var(--vmgs-primary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-3);
+}
+
+/* Card team social */
+.card-team-social {
+    /* Display */
+    display: flex;
+    
+    /* Justify content */
+    justify-content: center;
+    
+    /* Gap */
+    gap: var(--space-3);
+}
+
+/* Card team social link */
+.card-team-social a {
+    /* Width */
+    width: 36px;
+    
+    /* Height */
+    height: 36px;    
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Justify content */
+    justify-content: center;
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+    
+    /* Background */
+    background: var(--bg-secondary);
+    
+    /* Color */
+    color: var(--text-secondary);
+    
+    /* Transition */
+    transition: var(--transition-normal);
+}
+
+.card-team-social a:hover {
+    /* Background */
+    background: var(--vmgs-primary);
+    
+    /* Color */
+    color: white;
+    
+    /* Transform */
+    transform: translateY(-2px);
+}
+
+/* =================================================================
+   16. CARD WITH BLOG - THẺ BLOG
+   ================================================================= */
+
+/* Card blog */
+.card-blog {
+    /* Overflow */
+    overflow: hidden;
+}
+
+/* Card blog meta */
+.card-blog-meta {
+    /* Display */
+    display: flex;
+    
+    /* Align items */    align-items: center;
+    
+    /* Gap */
+    gap: var(--space-4);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-3);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Color */
+    color: var(--text-tertiary);
+}
+
+/* Card blog meta item */
+.card-blog-meta-item {
+    /* Display */
+    display: flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Gap */
+    gap: var(--space-1);
+}
+
+/* Card blog category */
+.card-blog-category {
+    /* Display */
+    inline-block;
+    
+    /* Padding */
+    padding: var(--space-1) var(--space-3);
+    
+    /* Font size */
+    font-size: var(--font-size-xs);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Text transform */
+    text-transform: uppercase;
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-wide);
+    
+    /* Color */
+    color: var(--text-light);
+        /* Background */
+    background: var(--vmgs-primary);
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+}
+
+/* Card blog read more */
+.card-blog-read-more {
+    /* Display */
+    inline-flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Gap */
+    gap: var(--space-2);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-semibold);
+    
+    /* Color */
+    color: var(--vmgs-primary);
+    
+    /* Transition */
+    transition: var(--transition-normal);
+}
+
+.card-blog-read-more:hover {
+    /* Color */
+    color: var(--vmgs-primary-dark);
+    
+    /* Gap */
+    gap: var(--space-3);
+}
+
+/* =================================================================
+   17. RESPONSIVE CARDS - THẺ RESPONSIVE
+   ================================================================= */
+
+/* Small screens */
+@media (max-width: 575.98px) {
+    /* Card body padding */
+    .card-body {
+        /* Padding */
+        padding: var(--space-4);
+    }
+    
+    /* Card title font size */
+    .card-title {        /* Font size */
+        font-size: var(--font-size-xl);
+    }
+    
+    /* Card grid */
+    .card-grid {
+        /* Grid template columns */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+    /* Card body padding */
+    .card-body {
+        /* Padding */
+        padding: var(--space-6);
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    /* Card hover effect */
+    .card:hover {
+        /* Transform */
+        transform: translateY(-10px);
+    }
+}
+
+/* =================================================================
+   18. ACCESSIBILITY - KHẢ NĂNG TIẾP CẬN
+   ================================================================= */
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    /* Increase card contrast */
+    .card {
+        /* Border */
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    /* Remove animations */
+    .card {
+        /* Transition */
+        transition: none !important;
+        
+        /* Transform */        transform: none !important;
+    }
+}
+
+/* =================================================================
+   19. DARK MODE CARDS - THẺ CHẾ ĐỘ TỐI
+   ================================================================= */
+
+/* Auto dark mode */
+@media (prefers-color-scheme: dark) {
+    /* Card background */
+    .card {
+        /* Background color */
+        background-color: var(--vmgs-gray-900);
+        
+        /* Border color */
+        border-color: var(--vmgs-gray-700);
+    }
+    
+    /* Card header */
+    .card-header {
+        /* Background color */
+        background-color: var(--vmgs-gray-850);
+        
+        /* Border color */
+        border-color: var(--vmgs-gray-700);
+    }
+    
+    /* Card footer */
+    .card-footer {
+        /* Background color */
+        background-color: var(--vmgs-gray-850);
+        
+        /* Border color */
+        border-color: var(--vmgs-gray-700);
+    }
+    
+    /* Card text color */
+    .card-title,
+    .card-subtitle,
+    .card-text {
+        /* Color */
+        color: var(--text-light);
+    }
+}
+
+/* Explicit dark mode */
+[data-theme="dark"] .card {
+    /* Background color */
+    background-color: var(--vmgs-gray-900);    
+    /* Border color */
+    border-color: var(--vmgs-gray-700);
+}
+
+[data-theme="dark"] .card-header {
+    /* Background color */
+    background-color: var(--vmgs-gray-850);
+    
+    /* Border color */
+    border-color: var(--vmgs-gray-700);
+}
+
+[data-theme="dark"] .card-footer {
+    /* Background color */
+    background-color: var(--vmgs-gray-850);
+    
+    /* Border color */
+    border-color: var(--vmgs-gray-700);
+}
+
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .card-subtitle,
+[data-theme="dark"] .card-text {
+    /* Color */
+    color: var(--text-light);
+}
+
+/* =================================================================
+   20. PRINT CARDS - IN ẤN THẺ
+   ================================================================= */
+
+@media print {
+    /* Card styles for print */
+    .card {
+        /* Box shadow */
+        box-shadow: none !important;
+        
+        /* Border */
+        border: 1px solid #000 !important;
+    }
+    
+    /* Hide decorative elements */
+    .card-badge,
+    .card-icon {
+        /* Display */
+        display: none !important;
+    }
+}
+/* =================================================================
+   21. CUSTOM CARD CLASSES - LỚP THẺ TÙY CHỈNH
+   ================================================================= */
+
+/* Feature card */
+.card-feature {
+    /* Text align */
+    text-align: center;
+    
+    /* Padding */
+    padding: var(--space-8);
+}
+
+/* Service card */
+.card-service {
+    /* Transition */
+    transition: all 0.3s ease;
+}
+
+.card-service:hover {
+    /* Transform */
+    transform: translateY(-10px);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xl);
+}
+
+/* Product card */
+.card-product {
+    /* Position */
+    position: relative;
+}
+
+/* Product card image */
+.card-product-img {
+    /* Height */
+    height: 250px;
+    
+    /* Object fit */
+    object-fit: contain;
+    
+    /* Padding */
+    padding: var(--space-4);
+}
+
+/* Product card price */
+.card-product-price {
+    /* Font size */
+    font-size: var(--font-size-2xl);
+        /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Color */
+    color: var(--vmgs-primary);
+}
+
+/* Product card old price */
+.card-product-price-old {
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Text decoration */
+    text-decoration: line-through;
+    
+    /* Color */
+    color: var(--text-tertiary);
+    
+    /* Margin left */
+    margin-left: var(--space-2);
+}
+
+/* Event card */
+.card-event {
+    /* Display */
+    display: flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+}
+
+/* Event card date */
+.card-event-date {
+    /* Display */
+    display: inline-block;
+    
+    /* Padding */
+    padding: var(--space-2) var(--space-4);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Text transform */
+    text-transform: uppercase;
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-wide);    
+    /* Color */
+    color: var(--text-light);
+    
+    /* Background */
+    background: var(--vmgs-primary);
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+    
+    /* Width */
+    width: fit-content;
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-3);
+}
+
+/* Profile card */
+.card-profile {
+    /* Text align */
+    text-align: center;
+}
+
+/* Profile card avatar */
+.card-profile-avatar {
+    /* Width */
+    width: 100px;
+    
+    /* Height */
+    height: 100px;
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+    
+    /* Margin */
+    margin: 0 auto var(--space-4);
+    
+    /* Object fit */
+    object-fit: cover;
+    
+    /* Border */
+    border: 4px solid var(--bg-primary);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-lg);
+}
+
+/* =================================================================
+   END OF VMGS HSTAI 777 CARD SYSTEM
+   ================================================================= */

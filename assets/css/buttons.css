@@ -1,0 +1,1297 @@
+﻿/* ========================================
+   VMGS HSTAI 777 BUTTON SYSTEM
+   Complete Button Styles & Components
+   Version: 1.0.0
+   Author: VMGS Design Team
+   ======================================== */
+
+/* =================================================================
+   0. IMPORT VARIABLES (Reference only - import in main.css)
+   ================================================================= */
+/* Note: Variables should be imported before this file in main.css */
+
+/* =================================================================
+   1. BUTTON BASE STYLES - NÚT CƠ BẢN
+   ================================================================= */
+
+/* Button base */
+.btn {
+    /* Display */
+    display: inline-flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Justify content */
+    justify-content: center;
+    
+    /* Gap between icon and text */
+    gap: var(--space-2);
+    
+    /* Padding */
+    padding: var(--space-3) var(--space-6);
+    
+    /* Font family */
+    font-family: var(--font-sans);
+    
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-semibold);
+    
+    /* Line height */
+    line-height: 1.5;
+    
+    /* Text align */
+    text-align: center;
+    
+    /* White space */
+    white-space: nowrap;
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+    
+    /* Border */
+    border: none;
+    
+    /* Background */
+    background: var(--vmgs-primary);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* Transition */
+    transition: var(--transition-normal);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-sm);
+    
+    /* Position */
+    position: relative;
+    
+    /* Overflow */
+    overflow: hidden;
+    
+    /* Z-index */
+    z-index: var(--z-10);
+    
+    /* User select */
+    user-select: none;
+    
+    /* Touch action */
+    touch-action: manipulation;
+}
+
+/* Button hover effect - Gradient shine */
+.btn::before {
+    /* Content */
+    content: '';
+    
+    /* Position */
+    position: absolute;
+    
+    /* Top */
+    top: 0;
+    
+    /* Left */
+    left: 0;
+    
+    /* Right */
+    right: 0;
+    
+    /* Bottom */
+    bottom: 0;
+    
+    /* Background */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    
+    /* Transform */
+    transform: translateX(-100%);
+    
+    /* Transition */
+    transition: transform 0.6s ease;
+    
+    /* Z-index */
+    z-index: -1;
+}
+
+.btn:hover::before {
+    /* Transform */
+    transform: translateX(100%);
+}
+
+/* Button active state */
+.btn:active {
+    /* Transform */
+    transform: scale(0.98);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xs);
+}
+
+/* Button focus state */
+.btn:focus {
+    /* Outline */
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    
+    /* Outline offset */
+    outline-offset: var(--focus-ring-offset);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-focus);
+}
+
+/* Button focus-visible for accessibility */
+.btn:focus-visible {
+    /* Outline */
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    
+    /* Outline offset */
+    outline-offset: var(--focus-ring-offset);
+}
+
+/* Button disabled state */
+.btn:disabled,
+.btn.disabled {
+    /* Opacity */
+    opacity: 0.5;
+    
+    /* Cursor */
+    cursor: not-allowed;
+    
+    /* Transform */
+    transform: none !important;
+    
+    /* Box shadow */
+    box-shadow: none !important;
+    
+    /* Pointer events */
+    pointer-events: none;
+}
+
+/* =================================================================
+   2. BUTTON VARIANTS - BIẾN THỂ NÚT
+   ================================================================= */
+
+/* Primary button */
+.btn-primary {
+    /* Background */
+    background: var(--vmgs-primary);
+    
+    /* Text color */
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    /* Background */
+    background: var(--vmgs-primary-dark);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+    /* Background */
+    background: var(--vmgs-primary-darker);
+}
+
+.btn-primary:focus {
+    /* Box shadow */
+    box-shadow: var(--shadow-focus);
+}
+
+/* Secondary button */
+.btn-secondary {
+    /* Background */
+    background: var(--vmgs-secondary);
+    
+    /* Text color */
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    /* Background */
+    background: var(--vmgs-secondary-dark);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:active {
+    /* Background */
+    background: var(--vmgs-secondary-darker);
+}
+
+/* Accent button */
+.btn-accent {
+    /* Background */
+    background: var(--vmgs-accent);
+    
+    /* Text color */
+    color: var(--vmgs-dark);
+}
+
+.btn-accent:hover {
+    /* Background */
+    background: var(--vmgs-accent-dark);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Success button */
+.btn-success {
+    /* Background */
+    background: var(--vmgs-success);
+    
+    /* Text color */
+    color: var(--text-light);
+}
+
+.btn-success:hover {
+    /* Background */
+    background: var(--vmgs-success-dark);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+.btn-success:active {
+    /* Background */
+    background: var(--vmgs-success-darker);
+}
+
+/* Danger button */
+.btn-danger {
+    /* Background */
+    background: var(--vmgs-danger);
+    
+    /* Text color */
+    color: var(--text-light);
+}
+
+.btn-danger:hover {
+    /* Background */
+    background: var(--vmgs-danger-dark);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+.btn-danger:active {
+    /* Background */
+    background: var(--vmgs-danger-darker);
+}
+
+/* Warning button */
+.btn-warning {
+    /* Background */
+    background: var(--vmgs-warning);
+    
+    /* Text color */
+    color: var(--vmgs-dark);
+}
+
+.btn-warning:hover {
+    /* Background */
+    background: var(--vmgs-warning-dark);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Info button */
+.btn-info {
+    /* Background */
+    background: var(--vmgs-info);
+    
+    /* Text color */
+    color: var(--text-light);
+}
+
+.btn-info:hover {
+    /* Background */
+    background: var(--vmgs-info-dark);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+.btn-info:active {
+    /* Background */
+    background: var(--vmgs-info-darker);
+}
+
+/* Light button */
+.btn-light {
+    /* Background */
+    background: var(--vmgs-light);
+    
+    /* Text color */
+    color: var(--vmgs-dark);
+    
+    /* Border */
+    border: 2px solid var(--border-primary);
+}
+
+.btn-light:hover {
+    /* Background */
+    background: var(--vmgs-gray-50);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Dark button */
+.btn-dark {
+    /* Background */
+    background: var(--vmgs-dark);
+    
+    /* Text color */
+    color: var(--text-light);
+}
+
+.btn-dark:hover {
+    /* Background */
+    background: #0a0a0a;
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Link button */
+.btn-link {
+    /* Background */
+    background: transparent;
+    
+    /* Text color */
+    color: var(--vmgs-primary);
+    
+    /* Box shadow */
+    box-shadow: none;
+    
+    /* Padding */
+    padding: var(--space-2) var(--space-3);
+    
+    /* Border radius */
+    border-radius: var(--radius-sm);
+}
+
+.btn-link:hover {
+    /* Background */
+    background: var(--vmgs-gray-50);
+    
+    /* Text color */
+    color: var(--vmgs-primary-dark);
+    
+    /* Text decoration */
+    text-decoration: underline;
+    
+    /* Box shadow */
+    box-shadow: none;
+}
+
+/* =================================================================
+   3. OUTLINE BUTTONS - NÚT VIỀN
+   ================================================================= */
+
+/* Outline primary */
+.btn-outline {
+    /* Background */
+    background: transparent;
+    
+    /* Border */
+    border: 2px solid var(--vmgs-primary);
+    
+    /* Text color */
+    color: var(--vmgs-primary);
+}
+
+.btn-outline:hover {
+    /* Background */
+    background: var(--vmgs-primary);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Outline secondary */
+.btn-outline-secondary {
+    /* Background */
+    background: transparent;
+    
+    /* Border */
+    border: 2px solid var(--vmgs-secondary);
+    
+    /* Text color */
+    color: var(--vmgs-secondary);
+}
+
+.btn-outline-secondary:hover {
+    /* Background */
+    background: var(--vmgs-secondary);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Outline success */
+.btn-outline-success {
+    /* Background */
+    background: transparent;
+    
+    /* Border */
+    border: 2px solid var(--vmgs-success);
+    
+    /* Text color */
+    color: var(--vmgs-success);
+}
+
+.btn-outline-success:hover {
+    /* Background */
+    background: var(--vmgs-success);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Outline danger */
+.btn-outline-danger {
+    /* Background */
+    background: transparent;
+    
+    /* Border */
+    border: 2px solid var(--vmgs-danger);
+    
+    /* Text color */
+    color: var(--vmgs-danger);
+}
+
+.btn-outline-danger:hover {
+    /* Background */
+    background: var(--vmgs-danger);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Outline warning */
+.btn-outline-warning {
+    /* Background */
+    background: transparent;
+    
+    /* Border */
+    border: 2px solid var(--vmgs-warning);
+    
+    /* Text color */
+    color: var(--vmgs-warning);
+}
+
+.btn-outline-warning:hover {
+    /* Background */
+    background: var(--vmgs-warning);
+    
+    /* Text color */
+    color: var(--vmgs-dark);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Outline info */
+.btn-outline-info {
+    /* Background */
+    background: transparent;
+    
+    /* Border */
+    border: 2px solid var(--vmgs-info);
+    
+    /* Text color */
+    color: var(--vmgs-info);
+}
+
+.btn-outline-info:hover {
+    /* Background */
+    background: var(--vmgs-info);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Outline light */
+.btn-outline-light {
+    /* Background */
+    background: transparent;
+    
+    /* Border */
+    border: 2px solid var(--vmgs-light);
+    
+    /* Text color */
+    color: var(--vmgs-light);
+}
+
+.btn-outline-light:hover {
+    /* Background */
+    background: var(--vmgs-light);
+    
+    /* Text color */
+    color: var(--vmgs-dark);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Outline dark */
+.btn-outline-dark {
+    /* Background */
+    background: transparent;
+    
+    /* Border */
+    border: 2px solid var(--vmgs-dark);
+    
+    /* Text color */
+    color: var(--vmgs-dark);
+}
+
+.btn-outline-dark:hover {
+    /* Background */
+    background: var(--vmgs-dark);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* =================================================================
+   4. BUTTON SIZES - KÍCH THƯỚC NÚT
+   ================================================================= */
+
+/* Small button */
+.btn-sm {
+    /* Padding */
+    padding: var(--space-2) var(--space-4);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Height */
+    min-height: var(--btn-height-sm);
+}
+
+/* Base/Default button */
+.btn-base {
+    /* Padding */
+    padding: var(--space-3) var(--space-6);
+    
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Height */
+    min-height: var(--btn-height-base);
+}
+
+/* Large button */
+.btn-lg {
+    /* Padding */
+    padding: var(--space-4) var(--space-8);
+    
+    /* Font size */
+    font-size: var(--font-size-lg);
+    
+    /* Height */
+    min-height: var(--btn-height-lg);
+}
+
+/* Extra large button */
+.btn-xl {
+    /* Padding */
+    padding: var(--space-5) var(--space-10);
+    
+    /* Font size */
+    font-size: var(--font-size-xl);
+    
+    /* Border radius */
+    border-radius: var(--radius-xl);
+    
+    /* Height */
+    min-height: var(--btn-height-xl);
+}
+
+/* =================================================================
+   5. BUTTON ICONS - NÚT CÓ BIỂU TƯỢNG
+   ================================================================= */
+
+/* Button with icon */
+.btn-icon {
+    /* Width */
+    width: 44px;
+    
+    /* Height */
+    height: 44px;
+    
+    /* Padding */
+    padding: 0;
+    
+    /* Border radius */
+    border-radius: var(--radius-full);
+    
+    /* Min width */
+    min-width: 44px;
+}
+
+/* Small icon button */
+.btn-icon-sm {
+    /* Width */
+    width: 36px;
+    
+    /* Height */
+    height: 36px;
+    
+    /* Min width */
+    min-width: 36px;
+}
+
+/* Large icon button */
+.btn-icon-lg {
+    /* Width */
+    width: 56px;
+    
+    /* Height */
+    height: 56px;
+    
+    /* Min width */
+    min-width: 56px;
+}
+
+/* Button with left icon */
+.btn-with-icon-left {
+    /* Flex direction */
+    flex-direction: row;
+}
+
+/* Button with right icon */
+.btn-with-icon-right {
+    /* Flex direction */
+    flex-direction: row-reverse;
+}
+
+/* Icon only button */
+.btn-icon-only {
+    /* Width */
+    width: 44px;
+    
+    /* Height */
+    height: 44px;
+    
+    /* Padding */
+    padding: 0;
+    
+    /* Min width */
+    min-width: 44px;
+}
+
+/* =================================================================
+   6. BUTTON STATES - TRẠNG THÁI NÚT
+   ================================================================= */
+
+/* Loading state */
+.btn-loading {
+    /* Position */
+    position: relative;
+    
+    /* Pointer events */
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    /* Content */
+    content: '';
+    
+    /* Position */
+    position: absolute;
+    
+    /* Top */
+    top: 50%;
+    
+    /* Left */
+    left: 50%;
+    
+    /* Transform */
+    transform: translate(-50%, -50%);
+    
+    /* Width */
+    width: 20px;
+    
+    /* Height */
+    height: 20px;
+    
+    /* Border */
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    
+    /* Border top color */
+    border-top-color: white;
+    
+    /* Border radius */
+    border-radius: 50%;
+    
+    /* Animation */
+    animation: spin 1s linear infinite;
+}
+
+/* Active state */
+.btn-active {
+    /* Transform */
+    transform: scale(0.98);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xs);
+}
+
+/* Focus state */
+.btn-focus {
+    /* Outline */
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    
+    /* Outline offset */
+    outline-offset: var(--focus-ring-offset);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-focus);
+}
+
+/* =================================================================
+   7. BUTTON GROUPS - NHÓM NÚT
+   ================================================================= */
+
+/* Button group */
+.btn-group {
+    /* Display */
+    display: inline-flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Border radius */
+    border-radius: var(--radius-md);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-sm);
+    
+    /* Overflow */
+    overflow: hidden;
+}
+
+/* Button group vertical */
+.btn-group-vertical {
+    /* Display */
+    display: inline-flex;
+    
+    /* Flex direction */
+    flex-direction: column;
+    
+    /* Border radius */
+    border-radius: var(--radius-md);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-sm);
+    
+    /* Overflow */
+    overflow: hidden;
+}
+
+/* Button group item */
+.btn-group .btn {
+    /* Border radius */
+    border-radius: 0;
+    
+    /* Margin */
+    margin: 0;
+    
+    /* Box shadow */
+    box-shadow: none;
+}
+
+/* Button group first item */
+.btn-group .btn:first-child {
+    /* Border radius */
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+/* Button group last item */
+.btn-group .btn:last-child {
+    /* Border radius */
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* Button group vertical first item */
+.btn-group-vertical .btn:first-child {
+    /* Border radius */
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+/* Button group vertical last item */
+.btn-group-vertical .btn:last-child {
+    /* Border radius */
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+/* =================================================================
+   8. BUTTON UTILITIES - TIỆN ÍCH NÚT
+   ================================================================= */
+
+/* Block button - Full width */
+.btn-block {
+    /* Display */
+    display: flex;
+    
+    /* Width */
+    width: 100%;
+}
+
+/* Square button */
+.btn-square {
+    /* Width */
+    width: 44px;
+    
+    /* Height */
+    height: 44px;
+    
+    /* Padding */
+    padding: 0;
+    
+    /* Min width */
+    min-width: 44px;
+}
+
+/* Rounded button */
+.btn-rounded {
+    /* Border radius */
+    border-radius: var(--radius-full);
+}
+
+/* Pill button */
+.btn-pill {
+    /* Border radius */
+    border-radius: var(--radius-3xl);
+}
+
+/* Ghost button */
+.btn-ghost {
+    /* Background */
+    background: transparent;
+    
+    /* Border */
+    border: 2px solid transparent;
+    
+    /* Box shadow */
+    box-shadow: none;
+}
+
+.btn-ghost:hover {
+    /* Background */
+    background: var(--vmgs-gray-50);
+}
+
+/* =================================================================
+   9. BUTTON ANIMATIONS - HOẠT HÌNH NÚT
+   ================================================================= */
+
+/* Pulse animation */
+.btn-pulse {
+    /* Animation */
+    animation: pulse 2s infinite;
+}
+
+/* Bounce animation */
+.btn-bounce {
+    /* Animation */
+    animation: bounce 2s infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* =================================================================
+   10. RESPONSIVE BUTTONS - NÚT RESPONSIVE
+   ================================================================= */
+
+/* Small screens */
+@media (max-width: 575.98px) {
+    /* Reduce button padding */
+    .btn {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Reduce button sizes */
+    .btn-lg {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--font-size-base);
+    }
+    
+    .btn-xl {
+        padding: var(--space-4) var(--space-8);
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Full width buttons on mobile */
+    .btn-mobile-full {
+        width: 100%;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+    /* Restore normal button sizes */
+    .btn {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--font-size-base);
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    /* Increase button padding for large screens */
+    .btn-lg {
+        padding: var(--space-5) var(--space-10);
+    }
+}
+
+/* =================================================================
+   11. ACCESSIBILITY - KHẢ NĂNG TIẾP CẬN
+   ================================================================= */
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    /* Increase button contrast */
+    .btn {
+        border: 2px solid currentColor;
+    }
+    
+    .btn-primary {
+        background: #cc5500;
+        color: white;
+    }
+    
+    .btn-secondary {
+        background: #004488;
+        color: white;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    /* Remove animations */
+    .btn::before {
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    .btn {
+        transition: none !important;
+    }
+}
+
+/* =================================================================
+   12. DARK MODE BUTTONS - NÚT CHẾ ĐỘ TỐI
+   ================================================================= */
+
+/* Auto dark mode */
+@media (prefers-color-scheme: dark) {
+    /* Button backgrounds */
+    .btn-primary {
+        background: var(--vmgs-primary-light);
+    }
+    
+    .btn-primary:hover {
+        background: var(--vmgs-primary);
+    }
+    
+    .btn-secondary {
+        background: var(--vmgs-secondary-light);
+    }
+    
+    .btn-secondary:hover {
+        background: var(--vmgs-secondary);
+    }
+    
+    /* Outline buttons */
+    .btn-outline {
+        border-color: var(--vmgs-primary-light);
+        color: var(--vmgs-primary-light);
+    }
+    
+    .btn-outline:hover {
+        background: var(--vmgs-primary-light);
+    }
+}
+
+/* Explicit dark mode */
+[data-theme="dark"] .btn-primary {
+    background: var(--vmgs-primary-light);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: var(--vmgs-primary);
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: var(--vmgs-secondary-light);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: var(--vmgs-secondary);
+}
+
+[data-theme="dark"] .btn-outline {
+    border-color: var(--vmgs-primary-light);
+    color: var(--vmgs-primary-light);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background: var(--vmgs-primary-light);
+    color: var(--text-light);
+}
+
+/* =================================================================
+   13. PRINT BUTTONS - NÚT IN ẤN
+   ================================================================= */
+
+@media print {
+    /* Hide buttons in print */
+    .btn {
+        display: none !important;
+    }
+    
+    /* Show important buttons */
+    .btn-print {
+        display: inline-block !important;
+        background: black !important;
+        color: white !important;
+    }
+}
+
+/* =================================================================
+   14. CUSTOM BUTTON CLASSES - LỚP NÚT TÙY CHỈNH
+   ================================================================= */
+
+/* Hero button */
+.btn-hero {
+    /* Padding */
+    padding: var(--space-4) var(--space-10);
+    
+    /* Font size */
+    font-size: var(--font-size-xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Border radius */
+    border-radius: var(--radius-xl);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-lg);
+    
+    /* Animation */
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.btn-hero:hover {
+    /* Transform */
+    transform: translateY(-2px);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xl);
+}
+
+/* Call to action button */
+.btn-cta {
+    /* Padding */
+    padding: var(--space-4) var(--space-8);
+    
+    /* Font size */
+    font-size: var(--font-size-lg);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Background */
+    background: var(--bg-gradient-1);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-cta:hover {
+    /* Transform */
+    transform: scale(1.05);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-glow), var(--shadow-lg);
+}
+
+/* Social button */
+.btn-social {
+    /* Display */
+    display: inline-flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Justify content */
+    justify-content: center;
+    
+    /* Gap */
+    gap: var(--space-3);
+    
+    /* Padding */
+    padding: var(--space-3) var(--space-4);
+    
+    /* Border radius */
+    border-radius: var(--radius-md);
+    
+    /* Width */
+    min-width: 180px;
+}
+
+/* Facebook button */
+.btn-facebook {
+    /* Background */
+    background: #3b5998;
+    
+    /* Text color */
+    color: white;
+}
+
+.btn-facebook:hover {
+    /* Background */
+    background: #2d4373;
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Google button */
+.btn-google {
+    /* Background */
+    background: white;
+    
+    /* Text color */
+    color: #757575;
+    
+    /* Border */
+    border: 1px solid var(--border-primary);
+}
+
+.btn-google:hover {
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* Twitter button */
+.btn-twitter {
+    /* Background */
+    background: #1da1f2;
+    
+    /* Text color */
+    color: white;
+}
+
+.btn-twitter:hover {
+    /* Background */
+    background: #0d8bd9;
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-md);
+}
+
+/* =================================================================
+   15. BUTTON ICON STYLES - KIỂU BIỂU TƯỢNG NÚT
+   ================================================================= */
+
+/* Icon size in buttons */
+.btn i {
+    /* Font size */
+    font-size: var(--font-size-lg);
+}
+
+.btn-sm i {
+    /* Font size */
+    font-size: var(--font-size-base);
+}
+
+.btn-lg i {
+    /* Font size */
+    font-size: var(--font-size-xl);
+}
+
+.btn-xl i {
+    /* Font size */
+    font-size: var(--font-size-2xl);
+}
+
+/* Icon spacing */
+.btn i:first-child {
+    /* Margin right */
+    margin-right: var(--space-2);
+}
+
+.btn i:last-child {
+    /* Margin left */
+    margin-left: var(--space-2);
+}
+
+/* =================================================================
+   END OF VMGS HSTAI 777 BUTTON SYSTEM
+   ================================================================= */

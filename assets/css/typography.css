@@ -1,0 +1,1544 @@
+﻿/* ========================================
+   VMGS HSTAI 777 TYPOGRAPHY SYSTEM
+   Complete Typography Styles
+   Version: 1.0.0
+   Author: VMGS Design Team
+   ======================================== */
+
+/* =================================================================
+   0. IMPORT VARIABLES (Reference only - import in main.css)
+   ================================================================= */
+/* Note: Variables should be imported before this file in main.css */
+
+/* =================================================================
+   1. BASE TYPOGRAPHY - KIỂU CHỮ CƠ BẢN
+   ================================================================= */
+
+/* Root font settings */
+html {
+    /* Base font size for REM calculations */
+    font-size: 16px;
+    
+    /* Smooth font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Text rendering optimization */
+    text-rendering: optimizeLegibility;
+}
+
+/* Body typography */
+body {
+    /* Font family */
+    font-family: var(--font-sans);
+    
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Line height */
+    line-height: var(--line-height-normal);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-normal);
+    
+    /* Text color */
+    color: var(--text-primary);
+    
+    /* Background color */
+    background-color: var(--bg-primary);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-normal);
+    
+    /* Word break */
+    word-break: break-word;
+    
+    /* Hyphenation */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+/* =================================================================
+   2. HEADINGS - TIÊU ĐỀ
+   ================================================================= */
+
+/* Heading base styles */
+h1, h2, h3, h4, h5, h6 {
+    /* Font family */
+    font-family: var(--font-sans);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Line height */
+    line-height: var(--line-height-tight);
+    
+    /* Text color */
+    color: var(--text-primary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-tight);
+    
+    /* Font smoothing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Heading 1 - Display */
+h1 {
+    /* Font size */
+    font-size: var(--font-size-6xl);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-tight);
+    
+    /* Line height */
+    line-height: var(--line-height-tight);
+    
+    /* Margin top */
+    margin-top: var(--space-8);
+}
+
+/* Heading 2 - Page title */
+h2 {
+    /* Font size */
+    font-size: var(--font-size-5xl);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-tight);
+    
+    /* Line height */
+    line-height: var(--line-height-tight);
+    
+    /* Margin top */
+    margin-top: var(--space-7);
+}
+
+/* Heading 3 - Section title */
+h3 {
+    /* Font size */
+    font-size: var(--font-size-4xl);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-normal);
+    
+    /* Line height */
+    line-height: var(--line-height-snug);
+    
+    /* Margin top */
+    margin-top: var(--space-6);
+}
+
+/* Heading 4 - Subsection title */
+h4 {
+    /* Font size */
+    font-size: var(--font-size-3xl);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-normal);
+    
+    /* Line height */
+    line-height: var(--line-height-snug);
+    
+    /* Margin top */
+    margin-top: var(--space-5);
+}
+
+/* Heading 5 - Component title */
+h5 {
+    /* Font size */
+    font-size: var(--font-size-2xl);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-wide);
+    
+    /* Line height */
+    line-height: var(--line-height-normal);
+    
+    /* Margin top */
+    margin-top: var(--space-4);
+}
+
+/* Heading 6 - Small title */
+h6 {
+    /* Font size */
+    font-size: var(--font-size-xl);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-wide);
+    
+    /* Line height */
+    line-height: var(--line-height-normal);
+    
+    /* Margin top */
+    margin-top: var(--space-3);
+}
+
+/* =================================================================
+   3. PARAGRAPHS - ĐOẠN VĂN
+   ================================================================= */
+
+/* Paragraph base styles */
+p {
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Text color */
+    color: var(--text-secondary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-normal);
+    
+    /* Hyphenation */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Lead paragraph - Introduction */
+p.lead {
+    /* Font size */
+    font-size: var(--font-size-lg);
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-medium);
+    
+    /* Text color */
+    color: var(--text-primary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-5);
+}
+
+/* Small paragraph */
+p.small {
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Line height */
+    line-height: var(--line-height-normal);
+    
+    /* Text color */
+    color: var(--text-tertiary);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-3);
+}
+
+/* Large paragraph */
+p.large {
+    /* Font size */
+    font-size: var(--font-size-lg);
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-5);
+}
+
+/* =================================================================
+   4. LINKS - LIÊN KẾT
+   ================================================================= */
+
+/* Link base styles */
+a {
+    /* Remove underline by default */
+    text-decoration: none;
+    
+    /* Color */
+    color: var(--vmgs-primary);
+    
+    /* Transition */
+    transition: var(--transition-color);
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* Word break */
+    word-break: break-word;
+}
+
+/* Link hover state */
+a:hover {
+    /* Color */
+    color: var(--vmgs-primary-dark);
+    
+    /* Add underline on hover */
+    text-decoration: underline;
+    
+    /* Text decoration thickness */
+    text-decoration-thickness: 2px;
+    
+    /* Text decoration offset */
+    text-decoration-offset: 2px;
+}
+
+/* Link active state */
+a:active {
+    /* Color */
+    color: var(--vmgs-primary-darker);
+}
+
+/* Link focus state */
+a:focus {
+    /* Outline */
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    
+    /* Outline offset */
+    outline-offset: var(--focus-ring-offset);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-focus);
+}
+
+/* Link visited state */
+a:visited {
+    /* Color */
+    color: var(--vmgs-secondary);
+}
+
+/* Link with icon */
+a.with-icon {
+    /* Display */
+    display: inline-flex;
+    
+    /* Align items */
+    align-items: center;
+    
+    /* Gap */
+    gap: var(--space-2);
+}
+
+/* Link button */
+a.btn-link {
+    /* Padding */
+    padding: var(--space-2) var(--space-3);
+    
+    /* Border radius */
+    border-radius: var(--radius-sm);
+    
+    /* Background */
+    background: transparent;
+    
+    /* Transition */
+    transition: var(--transition-normal);
+}
+
+a.btn-link:hover {
+    /* Background */
+    background: var(--vmgs-gray-50);
+    
+    /* Text decoration */
+    text-decoration: none;
+}
+
+/* =================================================================
+   5. TEXT ELEMENTS - PHẦN TỬ VĂN BẢN
+   ================================================================= */
+
+/* Strong / Bold text */
+strong,
+b {
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Color */
+    color: var(--text-primary);
+}
+
+/* Italic text */
+em,
+i {
+    /* Font style */
+    font-style: italic;
+    
+    /* Color */
+    color: var(--text-secondary);
+}
+
+/* Underline text */
+u {
+    /* Text decoration */
+    text-decoration: underline;
+    
+    /* Text decoration color */
+    text-decoration-color: var(--vmgs-primary);
+    
+    /* Text decoration thickness */
+    text-decoration-thickness: 2px;
+    
+    /* Text decoration style */
+    text-decoration-style: solid;
+}
+
+/* Strikethrough text */
+s,
+del {
+    /* Text decoration */
+    text-decoration: line-through;
+    
+    /* Text decoration color */
+    text-decoration-color: var(--vmgs-danger);
+    
+    /* Text decoration thickness */
+    text-decoration-thickness: 2px;
+}
+
+/* Mark / Highlight text */
+mark {
+    /* Background color */
+    background-color: var(--vmgs-warning-light);
+    
+    /* Text color */
+    color: var(--vmgs-dark);
+    
+    /* Padding */
+    padding: var(--space-1) var(--space-2);
+    
+    /* Border radius */
+    border-radius: var(--radius-xs);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-medium);
+}
+
+/* Small text */
+small {
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Line height */
+    line-height: var(--line-height-normal);
+    
+    /* Text color */
+    color: var(--text-tertiary);
+}
+
+/* Subscript text */
+sub {
+    /* Font size */
+    font-size: var(--font-size-xs);
+    
+    /* Vertical align */
+    vertical-align: sub;
+    
+    /* Line height */
+    line-height: 0;
+}
+
+/* Superscript text */
+sup {
+    /* Font size */
+    font-size: var(--font-size-xs);
+    
+    /* Vertical align */
+    vertical-align: super;
+    
+    /* Line height */
+    line-height: 0;
+}
+
+/* Abbreviation */
+abbr {
+    /* Border bottom */
+    border-bottom: 1px dotted var(--vmgs-gray-400);
+    
+    /* Cursor */
+    cursor: help;
+    
+    /* Text decoration */
+    text-decoration: none;
+}
+
+/* Citation */
+cite {
+    /* Font style */
+    font-style: italic;
+    
+    /* Text color */
+    color: var(--text-tertiary);
+}
+
+/* Definition term */
+dfn {
+    /* Font style */
+    font-style: italic;
+    
+    /* Font weight */
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Inserted text */
+ins {
+    /* Background color */
+    background-color: var(--vmgs-success-light);
+    
+    /* Text color */
+    color: var(--vmgs-success-dark);
+    
+    /* Text decoration */
+    text-decoration: none;
+    
+    /* Padding */
+    padding: var(--space-1) var(--space-1);
+}
+
+/* Keyboard input */
+kbd {
+    /* Font family */
+    font-family: var(--font-mono);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Background color */
+    background-color: var(--vmgs-gray-800);
+    
+    /* Text color */
+    color: var(--text-light);
+    
+    /* Padding */
+    padding: var(--space-1) var(--space-2);
+    
+    /* Border radius */
+    border-radius: var(--radius-sm);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-xs);
+    
+    /* Border */
+    border: 1px solid var(--vmgs-gray-700);
+}
+
+/* Variable */
+var {
+    /* Font style */
+    font-style: italic;
+    
+    /* Font weight */
+    font-weight: var(--font-weight-semibold);
+    
+    /* Color */
+    color: var(--vmgs-info);
+}
+
+/* Sample output */
+samp {
+    /* Font family */
+    font-family: var(--font-mono);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Color */
+    color: var(--vmgs-secondary);
+}
+
+/* =================================================================
+   6. BLOCKQUOTES - TRÍCH DẪN
+   ================================================================= */
+
+/* Blockquote base styles */
+blockquote {
+    /* Border left */
+    border-left: 4px solid var(--vmgs-primary);
+    
+    /* Padding */
+    padding: var(--space-4) var(--space-6);
+    
+    /* Margin */
+    margin: var(--space-6) 0;
+    
+    /* Background color */
+    background-color: var(--bg-secondary);
+    
+    /* Border radius */
+    border-radius: var(--radius-sm);
+    
+    /* Font style */
+    font-style: italic;
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Position */
+    position: relative;
+}
+
+/* Blockquote with icon */
+blockquote.with-icon {
+    /* Padding */
+    padding: var(--space-6);
+    
+    /* Background */
+    background: var(--bg-gradient-3);
+}
+
+blockquote.with-icon::before {
+    /* Content */
+    content: '"';
+    
+    /* Position */
+    position: absolute;
+    
+    /* Top */
+    top: var(--space-3);
+    
+    /* Left */
+    left: var(--space-4);
+    
+    /* Font size */
+    font-size: var(--font-size-8xl);
+    
+    /* Color */
+    color: var(--vmgs-primary);
+    
+    /* Opacity */
+    opacity: 0.2;
+    
+    /* Line height */
+    line-height: 1;
+}
+
+/* Blockquote footer - Citation */
+blockquote footer {
+    /* Display */
+    display: block;
+    
+    /* Margin top */
+    margin-top: var(--space-3);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Font style */
+    font-style: normal;
+    
+    /* Text color */
+    color: var(--text-tertiary);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-medium);
+}
+
+blockquote footer::before {
+    /* Content */
+    content: '— ';
+}
+
+/* Blockquote large */
+blockquote.large {
+    /* Padding */
+    padding: var(--space-8) var(--space-10);
+    
+    /* Font size */
+    font-size: var(--font-size-lg);
+    
+    /* Line height */
+    line-height: var(--line-height-loose);
+}
+
+/* =================================================================
+   7. CODE & PRE - MÃ NGUỒN
+   ================================================================= */
+
+/* Inline code */
+code {
+    /* Font family */
+    font-family: var(--font-mono);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Line height */
+    line-height: var(--line-height-normal);
+    
+    /* Background color */
+    background-color: var(--vmgs-gray-50);
+    
+    /* Text color */
+    color: var(--vmgs-secondary);
+    
+    /* Padding */
+    padding: var(--space-1) var(--space-2);
+    
+    /* Border radius */
+    border-radius: var(--radius-xs);
+    
+    /* Border */
+    border: 1px solid var(--vmgs-gray-200);
+    
+    /* Word break */
+    word-break: break-all;
+}
+
+/* Code block */
+pre {
+    /* Font family */
+    font-family: var(--font-mono);
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Background color */
+    background-color: var(--vmgs-gray-50);
+    
+    /* Text color */
+    color: var(--vmgs-dark);
+    
+    /* Padding */
+    padding: var(--space-4);
+    
+    /* Border radius */
+    border-radius: var(--radius-md);
+    
+    /* Overflow */
+    overflow-x: auto;
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-6);
+    
+    /* Box shadow */
+    box-shadow: var(--shadow-sm);
+    
+    /* Border */
+    border: 1px solid var(--border-primary);
+}
+
+/* Pre with code */
+pre code {
+    /* Background */
+    background: none;
+    
+    /* Border */
+    border: none;
+    
+    /* Padding */
+    padding: 0;
+    
+    /* Font size */
+    font-size: inherit;
+    
+    /* Color */
+    color: inherit;
+}
+
+/* Pre with line numbers */
+pre.with-line-numbers {
+    /* Position */
+    position: relative;
+}
+
+pre.with-line-numbers::before {
+    /* Content */
+    content: '';
+    
+    /* Position */
+    position: absolute;
+    
+    /* Left */
+    left: 0;
+    
+    /* Top */
+    top: 0;
+    
+    /* Bottom */
+    bottom: 0;
+    
+    /* Width */
+    width: 40px;
+    
+    /* Background */
+    background: var(--vmgs-gray-100);
+    
+    /* Border right */
+    border-right: 1px solid var(--border-primary);
+    
+    /* Border radius */
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+/* =================================================================
+   8. LISTS - DANH SÁCH
+   ================================================================= */
+
+/* Unordered list */
+ul {
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+    
+    /* Padding left */
+    padding-left: var(--space-6);
+}
+
+/* Ordered list */
+ol {
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+    
+    /* Padding left */
+    padding-left: var(--space-6);
+}
+
+/* List item */
+li {
+    /* Margin bottom */
+    margin-bottom: var(--space-2);
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Text color */
+    color: var(--text-secondary);
+}
+
+/* Nested list */
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    /* Margin bottom */
+    margin-bottom: 0;
+    
+    /* Margin top */
+    margin-top: var(--space-2);
+}
+
+/* List unstyled - No bullets */
+.list-unstyled {
+    /* Padding */
+    padding-left: 0;
+    
+    /* List style */
+    list-style: none;
+}
+
+/* List inline */
+.list-inline {
+    /* Display */
+    display: flex;
+    
+    /* Flex wrap */
+    flex-wrap: wrap;
+    
+    /* Gap */
+    gap: var(--space-3);
+    
+    /* Padding */
+    padding-left: 0;
+    
+    /* List style */
+    list-style: none;
+}
+
+.list-inline li {
+    /* Margin */
+    margin-bottom: 0;
+}
+
+/* List with custom bullets */
+.list-check {
+    /* Padding left */
+    padding-left: var(--space-6);
+}
+
+.list-check li::before {
+    /* Content */
+    content: '✓';
+    
+    /* Position */
+    position: absolute;
+    
+    /* Left */
+    left: 0;
+    
+    /* Color */
+    color: var(--vmgs-success);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Margin right */
+    margin-right: var(--space-2);
+}
+
+/* List with circle bullets */
+.list-circle {
+    /* List style type */
+    list-style-type: circle;
+}
+
+/* List with square bullets */
+.list-square {
+    /* List style type */
+    list-style-type: square;
+}
+
+/* =================================================================
+   9. TABLES - BẢNG
+   ================================================================= */
+
+/* Table base styles */
+table {
+    /* Width */
+    width: 100%;
+    
+    /* Border collapse */
+    border-collapse: collapse;
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-6);
+    
+    /* Font size */
+    font-size: var(--font-size-base);
+}
+
+/* Table caption */
+table caption {
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Text color */
+    color: var(--text-primary);
+    
+    /* Padding */
+    padding: var(--space-3) 0;
+    
+    /* Caption side */
+    caption-side: bottom;
+}
+
+/* Table head */
+table thead {
+    /* Background color */
+    background-color: var(--bg-secondary);
+}
+
+/* Table head cell */
+table th {
+    /* Padding */
+    padding: var(--space-4) var(--space-5);
+    
+    /* Text align */
+    text-align: left;
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Text transform */
+    text-transform: uppercase;
+    
+    /* Letter spacing */
+    letter-spacing: 1px;
+    
+    /* Font size */
+    font-size: var(--font-size-sm);
+    
+    /* Text color */
+    color: var(--text-primary);
+    
+    /* Border bottom */
+    border-bottom: 2px solid var(--border-primary);
+}
+
+/* Table body */
+table tbody {
+    /* Background color */
+    background-color: var(--bg-primary);
+}
+
+/* Table body row */
+table tbody tr {
+    /* Border bottom */
+    border-bottom: 1px solid var(--border-primary);
+    
+    /* Transition */
+    transition: var(--transition-background);
+}
+
+/* Table body row hover */
+table tbody tr:hover {
+    /* Background color */
+    background-color: var(--vmgs-gray-50);
+}
+
+/* Table body cell */
+table td {
+    /* Padding */
+    padding: var(--space-4) var(--space-5);
+    
+    /* Font size */
+    font-size: var(--font-size-base);
+    
+    /* Text color */
+    color: var(--text-secondary);
+    
+    /* Vertical align */
+    vertical-align: middle;
+    
+    /* Line height */
+    line-height: var(--line-height-normal);
+}
+
+/* Table striped */
+.table-striped tbody tr:nth-child(odd) {
+    /* Background color */
+    background-color: var(--vmgs-gray-50);
+}
+
+/* Table hover */
+.table-hover tbody tr:hover {
+    /* Background color */
+    background-color: var(--vmgs-gray-100);
+}
+
+/* Table bordered */
+.table-bordered {
+    /* Border */
+    border: 1px solid var(--border-primary);
+}
+
+.table-bordered th,
+.table-bordered td {
+    /* Border */
+    border: 1px solid var(--border-primary);
+}
+
+/* Table responsive */
+.table-responsive {
+    /* Overflow */
+    overflow-x: auto;
+    
+    /* Webkit overflow scrolling */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* =================================================================
+   10. TEXT UTILITIES - TIỆN ÍCH VĂN BẢN
+   ================================================================= */
+
+/* Text alignment */
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+
+/* Text transform */
+.text-uppercase { text-transform: uppercase !important; }
+.text-lowercase { text-transform: lowercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+/* Text decoration */
+.text-underline { text-decoration: underline !important; }
+.text-line-through { text-decoration: line-through !important; }
+.text-no-underline { text-decoration: none !important; }
+
+/* Text weight */
+.text-thin { font-weight: var(--font-weight-thin) !important; }
+.text-light { font-weight: var(--font-weight-light) !important; }
+.text-normal { font-weight: var(--font-weight-normal) !important; }
+.text-medium { font-weight: var(--font-weight-medium) !important; }
+.text-semibold { font-weight: var(--font-weight-semibold) !important; }
+.text-bold { font-weight: var(--font-weight-bold) !important; }
+.text-extrabold { font-weight: var(--font-weight-extrabold) !important; }
+.text-black { font-weight: var(--font-weight-black) !important; }
+
+/* Text color utilities */
+.text-primary { color: var(--vmgs-primary) !important; }
+.text-secondary { color: var(--vmgs-secondary) !important; }
+.text-success { color: var(--vmgs-success) !important; }
+.text-danger { color: var(--vmgs-danger) !important; }
+.text-warning { color: var(--vmgs-warning) !important; }
+.text-info { color: var(--vmgs-info) !important; }
+.text-light { color: var(--text-light) !important; }
+.text-dark { color: var(--text-primary) !important; }
+.text-muted { color: var(--text-muted) !important; }
+.text-white { color: white !important; }
+
+/* Text size utilities */
+.text-xs { font-size: var(--font-size-xs) !important; }
+.text-sm { font-size: var(--font-size-sm) !important; }
+.text-base { font-size: var(--font-size-base) !important; }
+.text-lg { font-size: var(--font-size-lg) !important; }
+.text-xl { font-size: var(--font-size-xl) !important; }
+.text-2xl { font-size: var(--font-size-2xl) !important; }
+.text-3xl { font-size: var(--font-size-3xl) !important; }
+.text-4xl { font-size: var(--font-size-4xl) !important; }
+.text-5xl { font-size: var(--font-size-5xl) !important; }
+.text-6xl { font-size: var(--font-size-6xl) !important; }
+
+/* Line height utilities */
+.line-height-none { line-height: var(--line-height-none) !important; }
+.line-height-tight { line-height: var(--line-height-tight) !important; }
+.line-height-snug { line-height: var(--line-height-snug) !important; }
+.line-height-normal { line-height: var(--line-height-normal) !important; }
+.line-height-relaxed { line-height: var(--line-height-relaxed) !important; }
+.line-height-loose { line-height: var(--line-height-loose) !important; }
+
+/* Letter spacing utilities */
+.tracking-tighter { letter-spacing: var(--letter-spacing-tighter) !important; }
+.tracking-tight { letter-spacing: var(--letter-spacing-tight) !important; }
+.tracking-normal { letter-spacing: var(--letter-spacing-normal) !important; }
+.tracking-wide { letter-spacing: var(--letter-spacing-wide) !important; }
+.tracking-wider { letter-spacing: var(--letter-spacing-wider) !important; }
+.tracking-widest { letter-spacing: var(--letter-spacing-widest) !important; }
+
+/* Text truncate */
+.text-truncate {
+    /* Overflow */
+    overflow: hidden;
+    
+    /* Text overflow */
+    text-overflow: ellipsis;
+    
+    /* White space */
+    white-space: nowrap;
+}
+
+/* Text break */
+.text-break {
+    /* Word break */
+    word-break: break-word;
+    
+    /* Overflow wrap */
+    overflow-wrap: break-word;
+}
+
+/* Text italic */
+.text-italic { font-style: italic !important; }
+
+/* Text normal style */
+.text-normal-style { font-style: normal !important; }
+
+/* =================================================================
+   11. RESPONSIVE TYPOGRAPHY - KIỂU CHỮ RESPONSIVE
+   ================================================================= */
+
+/* Mobile first - Small screens */
+@media (max-width: 575.98px) {
+    /* Reduce heading sizes */
+    h1 { font-size: var(--font-size-4xl); }
+    h2 { font-size: var(--font-size-3xl); }
+    h3 { font-size: var(--font-size-2xl); }
+    h4 { font-size: var(--font-size-xl); }
+    h5 { font-size: var(--font-size-lg); }
+    h6 { font-size: var(--font-size-base); }
+    
+    /* Reduce paragraph font size */
+    p { font-size: var(--font-size-sm); }
+    
+    /* Reduce lead paragraph */
+    p.lead { font-size: var(--font-size-base); }
+    
+    /* Adjust line heights */
+    body { line-height: var(--line-height-relaxed); }
+}
+
+/* Medium screens - Tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Slightly increase heading sizes */
+    h1 { font-size: var(--font-size-5xl); }
+    h2 { font-size: var(--font-size-4xl); }
+    h3 { font-size: var(--font-size-3xl); }
+}
+
+/* Large screens - Desktops */
+@media (min-width: 992px) {
+    /* Full heading sizes */
+    h1 { font-size: var(--font-size-6xl); }
+    h2 { font-size: var(--font-size-5xl); }
+    h3 { font-size: var(--font-size-4xl); }
+    
+    /* Increase body font size slightly */
+    body { font-size: var(--font-size-base); }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+    /* Increase body font size for large screens */
+    body { font-size: var(--font-size-lg); }
+    
+    /* Increase line height */
+    body { line-height: var(--line-height-relaxed); }
+}
+
+/* =================================================================
+   12. PRINT TYPOGRAPHY - KIỂU CHỮ IN ẤN
+   ================================================================= */
+
+@media print {
+    /* Base typography */
+    body {
+        /* Font size */
+        font-size: 12pt;
+        
+        /* Line height */
+        line-height: 1.5;
+        
+        /* Font family */
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+        /* Color */
+        color: #000;
+        
+        /* Background */
+        background: none;
+    }
+    
+    /* Hide non-essential elements */
+    a[href]::after {
+        /* Show URLs */
+        content: " (" attr(href) ")";
+        font-size: 90%;
+        color: #666;
+    }
+    
+    /* Don't show URLs for images or JavaScript links */
+    a[href^="http://"]::after,
+    a[href^="https://"]::after {
+        content: " (" attr(href) ")";
+    }
+    
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+        content: "";
+    }
+    
+    /* Abbreviations */
+    abbr[title]::after {
+        /* Show title in parentheses */
+        content: " (" attr(title) ")";
+    }
+    
+    /* Blockquotes */
+    blockquote {
+        /* Border */
+        border-left: 2pt solid #666;
+        
+        /* Padding */
+        padding-left: 10pt;
+        
+        /* Font style */
+        font-style: italic;
+    }
+    
+    /* Code */
+    pre,
+    code {
+        /* Background */
+        background: #f5f5f5;
+        
+        /* Border */
+        border: 1pt solid #ddd;
+    }
+    
+    /* Tables */
+    table {
+        /* Page break */
+        page-break-inside: avoid;
+    }
+    
+    /* Headings */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        /* Page break after */
+        page-break-after: avoid;
+    }
+    
+    /* Images */
+    img {
+        /* Page break */
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+}
+
+/* =================================================================
+   13. ACCESSIBILITY - KHẢ NĂNG TIẾP CẬN
+   ================================================================= */
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    /* Increase text contrast */
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    /* Increase heading contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
+    
+    /* Increase link contrast */
+    a {
+        color: #0000EE;
+    }
+    
+    /* Increase code contrast */
+    code {
+        background: #000;
+        color: #fff;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    /* Remove transitions */
+    * {
+        transition: none !important;
+    }
+}
+
+/* =================================================================
+   14. DARK MODE TYPOGRAPHY - KIỂU CHỮ CHẾ ĐỘ TỐI
+   ================================================================= */
+
+/* Auto dark mode based on system preference */
+@media (prefers-color-scheme: dark) {
+    /* Body text */
+    body {
+        color: var(--text-light);
+        background-color: var(--bg-dark);
+    }
+    
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--text-light);
+    }
+    
+    /* Paragraphs */
+    p {
+        color: var(--text-secondary);
+    }
+    
+    /* Links */
+    a {
+        color: var(--vmgs-primary-light);
+    }
+    
+    /* Code */
+    code {
+        background-color: var(--vmgs-gray-800);
+        color: var(--vmgs-secondary-light);
+    }
+    
+    /* Blockquotes */
+    blockquote {
+        background-color: var(--vmgs-gray-900);
+        border-left-color: var(--vmgs-primary-light);
+    }
+    
+    /* Tables */
+    table thead {
+        background-color: var(--vmgs-gray-900);
+    }
+    
+    table th {
+        color: var(--text-light);
+    }
+    
+    table td {
+        color: var(--text-secondary);
+    }
+}
+
+/* Explicit dark mode class */
+[data-theme="dark"] {
+    /* Body text */
+    color: var(--text-light);
+    background-color: var(--bg-dark);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--text-light);
+}
+
+[data-theme="dark"] p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] a {
+    color: var(--vmgs-primary-light);
+}
+
+[data-theme="dark"] code {
+    background-color: var(--vmgs-gray-800);
+    color: var(--vmgs-secondary-light);
+}
+
+[data-theme="dark"] blockquote {
+    background-color: var(--vmgs-gray-900);
+    border-left-color: var(--vmgs-primary-light);
+}
+
+/* =================================================================
+   15. CUSTOM TYPOGRAPHY CLASSES - LỚP KIỂU CHỮ TÙY CHỈNH
+   ================================================================= */
+
+/* Display headings */
+.display-1 {
+    /* Font size */
+    font-size: var(--font-size-8xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-black);
+    
+    /* Line height */
+    line-height: var(--line-height-tight);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-tighter);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-6);
+}
+
+.display-2 {
+    /* Font size */
+    font-size: var(--font-size-7xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-extrabold);
+    
+    /* Line height */
+    line-height: var(--line-height-tight);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-tight);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-5);
+}
+
+.display-3 {
+    /* Font size */
+    font-size: var(--font-size-6xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Line height */
+    line-height: var(--line-height-tight);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-tight);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+}
+
+.display-4 {
+    /* Font size */
+    font-size: var(--font-size-5xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-bold);
+    
+    /* Line height */
+    line-height: var(--line-height-snug);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-normal);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-4);
+}
+
+/* Article typography */
+.article-content {
+    /* Max width */
+    max-width: 70ch;
+    
+    /* Margin */
+    margin: 0 auto var(--space-6);
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+}
+
+.article-content p {
+    /* Margin bottom */
+    margin-bottom: var(--space-5);
+}
+
+.article-content h2 {
+    /* Margin top */
+    margin-top: var(--space-8);
+    
+    /* Padding top */
+    padding-top: var(--space-4);
+    
+    /* Border top */
+    border-top: 2px solid var(--border-primary);
+}
+
+.article-content h3 {
+    /* Margin top */
+    margin-top: var(--space-7);
+}
+
+/* Hero typography */
+.hero-text {
+    /* Text align */
+    text-align: center;
+}
+
+.hero-text h1 {
+    /* Font size */
+    font-size: var(--font-size-7xl);
+    
+    /* Font weight */
+    font-weight: var(--font-weight-black);
+    
+    /* Letter spacing */
+    letter-spacing: var(--letter-spacing-tighter);
+    
+    /* Margin bottom */
+    margin-bottom: var(--space-5);
+}
+
+.hero-text p {
+    /* Font size */
+    font-size: var(--font-size-xl);
+    
+    /* Line height */
+    line-height: var(--line-height-relaxed);
+    
+    /* Max width */
+    max-width: 700px;
+    
+    /* Margin */
+    margin: 0 auto var(--space-6);
+}
+
+/* =================================================================
+   END OF VMGS HSTAI 777 TYPOGRAPHY SYSTEM
+   ================================================================= */
