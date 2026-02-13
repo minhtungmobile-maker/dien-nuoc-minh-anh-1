@@ -1,0 +1,83 @@
+﻿/* * 🔐 HSTAI 777 x V MASTER - VMGS LAYOUT CORE
+ * 🏛 CHIẾN LƯỢC: LIỀN MẠCH = 1 | RỜI RẠC = 0 | RỦI RO = 0
+ * 📅 PHIÊN BẢN: HYPERSCALE ENGINEERING 2026
+ */
+
+/* 1. GRID SYSTEM (XƯƠNG SỐNG TẬP ĐOÀN) */
+.vmgs-wrapper {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    transition: var(--transition-speed);
+}
+
+/* 2. HEADER SECTION (TRUNG TÂM ĐIỀU PHỐI) */
+.main-header {
+    grid-area: header;
+    height: 70px;
+    background: var(--vmaster-pure);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 3. SIDEBAR NAVIGATION (DANH MỤC DI SẢN) */
+.sidebar {
+    grid-area: sidebar;
+    background: var(--vmaster-primary);
+    color: var(--vmaster-pure);
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 70px);
+}
+
+/* 4. MAIN CONTENT AREA (KHÔNG GIAN LÀM VIỆC) */
+.main-content {
+    grid-area: main;
+    padding: 40px;
+    background: var(--vmaster-bg);
+    overflow-x: hidden;
+}
+
+/* 5. FLEXBOX UTILITIES (LIỀN MẠCH 1) */
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* 6. RESPONSIVE ENGINE (TƯƠNG THÍCH ĐẦU CUỐI) */
+@media (max-width: 1024px) {
+    .vmgs-wrapper {
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        display: none; /* Mobile ẩn sidebar chuyển sang Menu Drawer */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content { padding: 20px; }
+    .grid-3-cols { grid-template-columns: 1fr; }
+}
+
+/* 7. SCROLLBAR TINH KHIẾT */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 10px; }

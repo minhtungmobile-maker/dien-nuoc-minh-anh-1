@@ -1,0 +1,108 @@
+﻿/* * 🔐 HSTAI 777 x V MASTER - THE UNIFIED MAIN CORE 
+ * 🏛 CHIẾN LƯỢC: LIỀN MẠCH = 1 | RỜI RẠC = 0 | RỦI RO = 0
+ * 🛡 TRẠNG THÁI: MAXIMUM_PREMIUM_LOCK
+ */
+
+/* === TẦNG 1: BIẾN SỐ NỘI SINH (ROOT VARIABLES) === */
+:root {
+    --purity-white: #FFFFFF;
+    --vmaster-black: #000000;
+    --g777-gold: #D4AF37;
+    --google-blue: #4285F4;
+    --system-bg: #F8F9FA;
+    --font-v: 'Inter', system-ui, -apple-system, sans-serif;
+    --shadow-v: 0 10px 40px rgba(0,0,0,0.08);
+    --transition-v: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* === TẦNG 2: ĐỊNH NGHĨA KHUNG XƯƠNG (LAYOUT CORE) === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-v); background: var(--system-bg); color: var(--vmaster-black); overflow-x: hidden; }
+
+.vmgs-app-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.v-header {
+    height: 80px;
+    background: var(--purity-white);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 777;
+    justify-content: space-between;
+}
+
+.v-main {
+    flex: 1;
+    padding: 40px 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* === TẦNG 3: THÀNH PHẦN TINH KHIẾT (COMPONENTS) === */
+.v-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.v-card-pure {
+    background: var(--purity-white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow-v);
+    transition: var(--transition-v);
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.v-card-pure:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.v-card-pure::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 5px; height: 100%;
+    background: var(--g777-gold);
+}
+
+/* === TẦNG 4: NÚT ĐIỀU PHỐI (V MASTER BUTTONS) === */
+.btn-v-master {
+    background: var(--vmaster-black);
+    color: var(--purity-white);
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-v);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-v-master:hover {
+    background: var(--g777-gold);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+}
+
+/* === TẦNG 5: TƯƠNG THÍCH ĐẦU CUỐI (RESPONSIVE) === */
+@media (max-width: 768px) {
+    .v-header { padding: 0 20px; height: 70px; }
+    .v-main { padding: 20px; }
+    .btn-v-master { width: 100%; text-align: center; }
+}
+
+/* === TẦNG 6: TRẠNG THÁI NIÊM PHONG (SYSTEM UTILS) === */
+.text-gold { color: var(--g777-gold); }
+.lock-status-1 { border: 2px solid var(--vmaster-black); padding: 5px 15px; border-radius: 5px; font-weight: bold; }
